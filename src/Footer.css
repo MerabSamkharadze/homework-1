@@ -44,3 +44,9 @@ p {
     font-size: 10px;
   }
 }
+
+@media (max-height: 700px) {
+  html {
+    font-size: 10px;
+  }
+}

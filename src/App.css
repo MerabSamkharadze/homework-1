@@ -127,3 +127,21 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+header,
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
