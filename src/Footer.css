@@ -22,14 +22,15 @@
   flex-wrap: wrap;
 }
 
-.Footer-nav li a,
-.Footer-links li a {
+.Footer-nav li,
+.Footer-links li {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.Footer-nav li a:hover,
-.Footer-links li a:hover {
+.Footer-nav li:hover,
+.Footer-links li:hover {
   text-decoration: underline;
 }
 

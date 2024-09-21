@@ -7,34 +7,18 @@ export default function Footer() {
       <div className="Footer-content">
         <nav>
           <ul className="Footer-nav">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/services">Services</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-            <li>
-              <a href="/blog">Blog</a>
-            </li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>Blog</li>
           </ul>
         </nav>
 
         <ul className="Footer-links">
-          <li>
-            <a href="/privacy">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="/terms">Terms of Service</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Contact</li>
         </ul>
 
         <p>

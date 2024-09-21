@@ -1,3 +1,20 @@
-.Div {
-  background-color: red;
+.Content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.Content section {
+  margin-bottom: 3rem;
+}
+
+.Content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }
