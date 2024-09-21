@@ -36,8 +36,13 @@ footer {
     width: 200px;
   }
 }
-@media (max-height: 600px) {
+@media (max-height: 700px) {
   .Content section img {
     width: 160px;
+  }
+}
+@media (max-height: 400px) {
+  .Content section img {
+    width: 120px;
   }
 }
