@@ -1,0 +1,27 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.Header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav .Header-ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.Header-ul li {
+  cursor: pointer;
+}
+
+.Header-ul li:hover {
+  text-decoration: underline;
+}
