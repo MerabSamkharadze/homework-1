@@ -1,10 +1,39 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header,
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
 .Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
   padding: 2rem;
   text-align: center;
 }
 
 .Content section {
-  margin-bottom: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+.Content section img {
+  width: 250px;
 }
 
 .Content h2 {
@@ -17,4 +46,14 @@
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
+}
+
+footer {
+  background-color: #222;
+}
+
+@media (max-width: 400px) {
+  .Content section img {
+    width: 200px;
+  }
 }

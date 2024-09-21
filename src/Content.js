@@ -10,13 +10,13 @@ export default function Content() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
           malesuada. Curabitur pharetra augue sed metus egestas, id egestas
-          velit congue.
+          velit congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vivamus lacinia odio vitae vestibulum vestibulum.
         </p>
-      </section>
-
-      <section>
-        <h2>Our Services</h2>
-        <img href="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" />
+        <img
+          src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"
+          alt="content-img"
+        />
       </section>
     </div>
   );

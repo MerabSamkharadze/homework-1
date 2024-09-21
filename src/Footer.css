@@ -38,3 +38,9 @@ p {
   margin-top: 1rem;
   font-size: 0.875rem;
 }
+
+@media (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+}
