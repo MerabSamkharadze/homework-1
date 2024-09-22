@@ -21,9 +21,7 @@ export default function Footer() {
           <li>Contact</li>
         </ul>
 
-        <p>
-          &copy; {new Date().getFullYear()} My Website. All rights reserved.
-        </p>
+        <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
       </div>
     </footer>
   );

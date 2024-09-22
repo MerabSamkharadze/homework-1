@@ -1,5 +1,5 @@
 .Footer {
-  background-color: #333;
+  background: linear-gradient(to right, rgb(4, 4, 77), rgb(74, 3, 3));
   color: white;
   padding: 2rem;
   text-align: center;

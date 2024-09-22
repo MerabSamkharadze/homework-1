@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background: linear-gradient(to right, rgb(4, 4, 77), rgb(74, 3, 3));
   padding: 1rem 2rem;
   color: white;
 }
@@ -20,8 +20,9 @@ nav .Header-ul {
 
 .Header-ul li {
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .Header-ul li:hover {
-  text-decoration: underline;
+  transform: scale(1.2);
 }

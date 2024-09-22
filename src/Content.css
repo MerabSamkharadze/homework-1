@@ -1,4 +1,7 @@
 .Content {
+  background-image: url("https://media.licdn.com/dms/image/D4D12AQE6-AIm2o8Zfw/article-cover_image-shrink_720_1280/0/1708753498052?e=2147483647&v=beta&t=WGF5cX14RQJ3oFZiPcqfzpyzBMw8fRcShHE2Co6jUZ8");
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,17 +21,24 @@
 .Content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: bisque;
 }
 
-.Content p {
+.Content .lists {
   font-size: 1rem;
   line-height: 1.6;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
+  color: antiquewhite;
 }
-
-footer {
-  background-color: #222;
+.text-container {
+  padding: 20px 20px;
+  border-radius: 10px;
+  background-color: rgba(12, 4, 49, 0.387);
+}
+span {
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 400px) {
