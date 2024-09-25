@@ -19,6 +19,7 @@ nav .Header-ul {
 }
 
 .Header-ul li {
+  font-size: 1.6rem;
   cursor: pointer;
   transition: all 0.31s;
   font-weight: bold;

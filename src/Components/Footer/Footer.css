@@ -25,6 +25,7 @@
 
 .Footer-nav li,
 .Footer-links li {
+  font-size: 1.6rem;
   color: white;
   text-decoration: none;
   cursor: pointer;
