@@ -2,7 +2,7 @@ import React from "react";
 import "./Product.css";
 import Button from "../Button/Button";
 
-export default function Product({ title, description, image, onAddToCart }) {
+export default function Product({ title, description, image }) {
   return (
     <div className="product">
       <img src={image} alt={title} className="product-image" />

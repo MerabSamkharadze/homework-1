@@ -147,18 +147,24 @@ body {
 }
 @media (max-width: 800px) {
   html {
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 
 @media (max-height: 600px) {
   html {
-    font-size: 8px;
+    font-size: 6px;
   }
 }
 
 @media (max-height: 400px) {
   html {
-    font-size: 6px;
+    font-size: 4px;
+  }
+}
+
+@media (max-height: 300px) {
+  html {
+    font-size: 3px;
   }
 }
