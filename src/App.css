@@ -170,6 +170,12 @@ body {
 
 @media (max-height: 300px) {
   html {
-    font-size: 3px;
+    font-size: 2.5px;
+  }
+}
+
+@media (max-height: 250px) {
+  html {
+    font-size: 2px;
   }
 }
