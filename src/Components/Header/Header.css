@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, rgb(202, 179, 4), rgb(215, 102, 10));
+  background: linear-gradient(to right, rgb(102, 4, 48), rgb(133, 34, 4));
   padding: 1rem 2rem;
   color: white;
 }
@@ -20,7 +20,7 @@ nav .Header-ul {
 
 .Header-ul li {
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.31s;
   font-weight: bold;
 }
 
