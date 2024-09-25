@@ -21,6 +21,7 @@ nav .Header-ul {
 .Header-ul li {
   cursor: pointer;
   transition: all 0.3s;
+  font-weight: bold;
 }
 
 .Header-ul li:hover {
