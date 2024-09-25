@@ -1,0 +1,32 @@
+.product {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.product-description {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #218838;
+}
