@@ -1,5 +1,6 @@
 import React from "react";
 import "./Product.css";
+import Button from "../Button/Button";
 
 export default function Product({ title, description, image, onAddToCart }) {
   return (
@@ -7,9 +8,7 @@ export default function Product({ title, description, image, onAddToCart }) {
       <img src={image} alt={title} className="product-image" />
       <h2 className="product-title">{title}</h2>
       <p className="product-description">{description}</p>
-      <button onClick={onAddToCart} className="add-to-cart-btn">
-        Add to Cart
-      </button>
+      <Button content={"Add to Cart"}>Add to Cart</Button>
     </div>
   );
 }
