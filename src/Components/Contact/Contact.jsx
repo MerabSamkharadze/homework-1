@@ -1,11 +1,12 @@
 import React from "react";
+import Button from "../Button/Button";
 import "./Contact.css";
 
 export default function Contact() {
   return (
     <div className="contact-container">
-      <h1>კონტაქტი</h1>
-      <p>მოგესალმებით! ეს არის სტატიკური საკონტაქტო ინფორმაცია.</p>
+      <h1>დაგვიკავშირდით</h1>
+
       <form>
         <div>
           <label htmlFor="name">სახელი:</label>
@@ -19,7 +20,7 @@ export default function Contact() {
           <label htmlFor="message">მესიჯი:</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <button type="submit">გაგზავნა</button>
+        <Button content={"გაგზავნა"} />
       </form>
     </div>
   );
