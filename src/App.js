@@ -11,7 +11,7 @@ import About from "./Components/About/About";
 export default function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/homework-1">
         <Header />
         <Routes>
           <Route path="/contact" element={<Contact />} />
