@@ -1,20 +1,29 @@
-/* About.css */
 .about-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full height to remove scrolling */
-  background-color: #e9ecef;
-  padding: 20px;
+  height: 100vh;
+  background: url("https://e66fkes8nnn.exactdn.com/wp-content/uploads/2017/06/Home-page-1-Elegant-supra.jpg?strip=all&lossy=1&ssl=1")
+    no-repeat center center;
+  background-size: cover;
+  padding: 2rem;
+}
+.about-us {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(250, 235, 215, 0.645);
+  padding: 5rem;
+}
+.about-us h1 {
+  font-size: 4rem;
+  font-weight: 700;
 }
 
-h1 {
-  color: #333;
-}
-
-p {
-  color: #666;
-  text-align: center;
-  max-width: 600px;
+.about-us p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: black;
 }
