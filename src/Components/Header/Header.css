@@ -18,7 +18,8 @@ nav .Header-ul {
   gap: 1.5rem;
 }
 
-.Header-ul li {
+.Header-ul li,
+.Link {
   font-size: 1.6rem;
   cursor: pointer;
   transition: all 0.31s;
@@ -27,4 +28,9 @@ nav .Header-ul {
 
 .Header-ul li:hover {
   transform: scale(1.2);
+}
+
+.Link {
+  color: white;
+  text-decoration: none;
 }

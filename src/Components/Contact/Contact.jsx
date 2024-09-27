@@ -1,9 +1,9 @@
 import React from "react";
 import "./Contact.css";
 
-const Contact = () => {
+export default function Contact() {
   return (
-    <div>
+    <div className="contact-container">
       <h1>კონტაქტი</h1>
       <p>მოგესალმებით! ეს არის სტატიკური საკონტაქტო ინფორმაცია.</p>
       <form>
@@ -23,6 +23,4 @@ const Contact = () => {
       </form>
     </div>
   );
-};
-
-export default Contact;
+}
