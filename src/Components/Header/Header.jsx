@@ -23,7 +23,11 @@ export default function Header() {
               Contact
             </Link>
           </li>
-          <li>Services</li>
+          <li>
+            <Link className="Link" to="/assignment-3">
+              assignment-3
+            </Link>
+          </li>
           <li>Blog</li>
         </ul>
       </nav>

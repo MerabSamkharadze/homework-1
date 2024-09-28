@@ -1,4 +1,5 @@
 import React from "react";
+import "./Temporary.css";
 
 const obj = {
   id: "10002",
@@ -22,8 +23,7 @@ export default function Temporary() {
   }, []);
 
   return (
-    <div>
-      <h1>Object Data Table</h1>
+    <div className="Temporary">
       <table border="1">
         <thead>
           <tr>
