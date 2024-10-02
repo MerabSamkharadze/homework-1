@@ -1,0 +1,46 @@
+.container {
+  padding: 2rem;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.page-title {
+  text-align: center;
+  padding: 2rem 4rem;
+  margin-bottom: 3rem;
+  color: #333;
+  display: inline-block;
+
+  border-radius: 1rem;
+  margin-top: 3.5rem;
+}
+
+.posts-container {
+  font-size: 2rem;
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding-right: 1rem;
+}
+
+.post {
+  border: 1px solid #fbb438;
+  padding: 2.2rem;
+  border-radius: 0.8rem;
+  background-color: #fcebc7b9;
+  margin-top: 1rem;
+}
+
+.post-title {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: rgb(16, 10, 73);
+}
+
+/* პოსტის კონტენტი */
+.post-content {
+  color: rgb(16, 3, 83);
+  font-size: 1.5rem;
+}

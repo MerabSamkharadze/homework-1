@@ -1,5 +1,9 @@
 .Header {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, rgb(102, 4, 48), rgb(133, 34, 4));
