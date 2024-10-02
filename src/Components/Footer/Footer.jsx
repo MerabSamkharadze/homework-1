@@ -24,8 +24,12 @@ export default function Footer() {
                 Contact
               </Link>
             </li>
-            <li>Services</li>
-            <li>Blog</li>
+
+            <li>
+              <Link className="Link" to="/blog">
+                Blog
+              </Link>
+            </li>
           </ul>
         </nav>
 
