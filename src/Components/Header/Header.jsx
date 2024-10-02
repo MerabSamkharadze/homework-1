@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header className="Header">
-      <div className="Header-logo">Geo Cuisine</div>
+      <Link className="Header-logo Link" to="/">
+        Geo Cuisine
+      </Link>
       <nav>
         <ul className="Header-ul">
           <li>
