@@ -14,7 +14,7 @@ function Profilee({ name, surname, email, imgSrc }) {
 
 const Profile = () => {
   let imgSrc =
-    "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp";
+    "https://iverieli.nplg.gov.ge/bitstream/1234/360370/1/Davit-Medzmariashvi_2-131.jpg";
   return (
     <div className="profile-container">
       <Profilee
