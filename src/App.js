@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Content from "./Components/Content/Content";
 import Contact from "./Components/Contact/Contact";
 import About from "./Components/About/About";
-import Temporary from "./Components/Temporary/Temporary";
+// import Temporary from "./Components/Temporary/Temporary";
 import Blog from "./Components/Blog/Blog";
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/assignment-3" element={<Temporary />} />
+          {/* <Route path="/assignment-3" element={<Temporary />} /> */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/" element={<Content />}></Route>
         </Routes>
