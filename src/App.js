@@ -18,6 +18,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/assignment-3" element={<Temporary />} />
+          <Route path="/blog" element={<Contact />} />
           <Route path="/" element={<Content />}></Route>
         </Routes>
         <Footer />

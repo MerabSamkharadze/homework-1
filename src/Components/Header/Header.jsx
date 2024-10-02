@@ -28,7 +28,11 @@ export default function Header() {
               assignment-3
             </Link>
           </li>
-          <li>Blog</li>
+          <li>
+            <Link className="Link" to="/blog">
+              Blog
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
