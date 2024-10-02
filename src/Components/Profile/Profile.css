@@ -1,0 +1,58 @@
+/* მთლიანად გვერდი */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* გვერდი არ უნდა ისქროლოს */
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* სქროლის გამორთვა */
+}
+
+/* პროფილის ბარათი */
+.profile-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+/* პროფილის ფოტოსთვის */
+.profile-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 4px solid #fbb438;
+}
+
+/* სახელის სტილი */
+.profile-name {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+/* გვარის სტილი */
+.profile-surname {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* მეილის სტილი */
+.profile-email {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 1rem;
+}
+
+/* ჰოვერ ეფექტი ბარათზე */
+.profile-card:hover {
+  transform: scale(1.05); /* ბარათი იზრდება ჰოვერისას */
+}
