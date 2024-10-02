@@ -1,7 +1,7 @@
 import React from "react";
 import "./Profile.css";
 
-function Profilee({ name, surname, email, imgSrc }) {
+function ProfileContent({ name, surname, email, imgSrc }) {
   return (
     <div className="profile-card">
       <img src={imgSrc} alt="Profile-img" className="profile-photo" />
@@ -17,7 +17,7 @@ const Profile = () => {
     "https://iverieli.nplg.gov.ge/bitstream/1234/360370/1/Davit-Medzmariashvi_2-131.jpg";
   return (
     <div className="profile-container">
-      <Profilee
+      <ProfileContent
         imgSrc={imgSrc}
         name={"გიორგი"}
         surname={"ქართველიშვილი"}
