@@ -15,8 +15,13 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link className="Link" to="/about">
-                About
+              <Link className="Link" to="/profile">
+                Profile
+              </Link>
+            </li>
+            <li>
+              <Link className="Link" to="/blog">
+                Blog
               </Link>
             </li>
             <li>
@@ -24,10 +29,9 @@ export default function Footer() {
                 Contact
               </Link>
             </li>
-
             <li>
-              <Link className="Link" to="/blog">
-                Blog
+              <Link className="Link" to="/about">
+                About
               </Link>
             </li>
           </ul>
