@@ -1,6 +1,8 @@
 import React from "react";
 import "./Profile.css";
 
+import Button from "../Button/Button";
+
 function ProfileContent({ name, surname, email, imgSrc }) {
   return (
     <div className="profile-card">
@@ -8,6 +10,7 @@ function ProfileContent({ name, surname, email, imgSrc }) {
       <h2 className="profile-name">სახელი: {name}</h2>
       <h3 className="profile-surname">გვარი: {surname}</h3>
       <p className="profile-email">Email: {email}</p>
+      <Button content={"განაახლე შენი პროფილი"} />
     </div>
   );
 }
