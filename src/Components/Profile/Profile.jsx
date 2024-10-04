@@ -15,19 +15,17 @@ function ProfileContent({ name, surname, email, imgSrc }) {
   );
 }
 
-const Profile = () => {
+export default function Profile() {
   let imgSrc =
     "https://iverieli.nplg.gov.ge/bitstream/1234/360370/1/Davit-Medzmariashvi_2-131.jpg";
   return (
     <div className="profile-container">
       <ProfileContent
         imgSrc={imgSrc}
-        name={"გიორგი"}
-        surname={"ქართველიშვილი"}
+        name={"ალიოშა"}
+        surname={"ბრეგვაძე"}
         email={"giorgi.kartvelishvili@example.com"}
       />
     </div>
   );
-};
-
-export default Profile;
+}
