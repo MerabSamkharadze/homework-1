@@ -19,13 +19,11 @@ export default async function Page({ params }) {
       </div>
 
       <div className="post-reactions">
-        <strong>👍</strong>
-        {posts.reactions.likes} | <strong>👎</strong> {posts.reactions.dislikes}
+        <strong>👍</strong> {posts.reactions.likes} <strong>👎</strong>
+        {posts.reactions.dislikes}
       </div>
 
-      <div className="post-views">
-        <strong>Views:</strong> {posts.views}
-      </div>
+      <div className="post-views">Views: {posts.views}</div>
     </div>
   );
 }
