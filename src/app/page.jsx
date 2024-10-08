@@ -1,6 +1,6 @@
-import React from "react";
-import "./Content.css";
-import ProductList from "../ProductList/ProductList";
+import ProductList from "../Components/productList/page";
+
+import "./Page.css";
 
 export default function Content() {
   const products = [
@@ -28,8 +28,8 @@ export default function Content() {
   ];
 
   return (
-    <main className="main-container">
+    <div className="main-container">
       <ProductList products={products} />
-    </main>
+    </div>
   );
 }

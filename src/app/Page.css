@@ -1,17 +1,9 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  /* overflow: hidden; */
-}
-
 .main-container {
   background: url("https://thefoodellers.com/wp-content/uploads/2023/11/italy-food-wine-scaled.jpg")
     no-repeat center center;
   background-size: cover;
   display: flex;
-
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }

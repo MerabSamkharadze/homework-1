@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -10,27 +10,27 @@ export default function Footer() {
         <nav>
           <ul className="Footer-nav">
             <li>
-              <Link className="Link" to="/">
+              <Link className="Link" href="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link className="Link" to="/profile">
+              <Link className="Link" href="/profile">
                 Profile
               </Link>
             </li>
             <li>
-              <Link className="Link" to="/blog">
+              <Link className="Link" href="/blog">
                 Blog
               </Link>
             </li>
             <li>
-              <Link className="Link" to="/contact">
+              <Link className="Link" href="/contact">
                 Contact
               </Link>
             </li>
             <li>
-              <Link className="Link" to="/about">
+              <Link className="Link" href="/about">
                 About
               </Link>
             </li>
@@ -41,7 +41,7 @@ export default function Footer() {
           <li>Privacy Policy</li>
           <li>Terms of Service</li>
           <li>
-            <Link className="Link" to="/contact">
+            <Link className="Link" href="/contact">
               Contact
             </Link>
           </li>
