@@ -1,0 +1,26 @@
+/* components/Loader.css */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: rgba(240, 177, 82, 0.642);
+}
+
+.spinner {
+  width: 6rem;
+  height: 6rem;
+  border: 0.8rem solid rgba(247, 158, 50, 0.3);
+  border-top: 0.8rem solid rgb(244, 103, 33);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
