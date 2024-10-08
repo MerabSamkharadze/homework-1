@@ -1,6 +1,4 @@
-import "../global.css";
-
-import Head from "next/head";
+import "./Global.css";
 
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
@@ -13,10 +11,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <title>Geo</title>
-        <meta name="description" content={metadata.description} />
-      </Head>
       <body>
         <Header />
         {children}
