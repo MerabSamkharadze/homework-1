@@ -1,4 +1,3 @@
-import React from "react";
 import ProductList from "../Components/productList/page";
 
 export default function Content() {
