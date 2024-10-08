@@ -1,43 +1,42 @@
-import React from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <header className="Header">
-      <Link className="Header-logo Link" to="/">
+      <Link className="Header-logo Link" href="/">
         Geo Cuisine
       </Link>
       <nav>
         <ul className="Header-ul">
           <li>
-            <Link className="Link" to="/">
+            <Link className="Link" href="/">
               Home
             </Link>
           </li>
           <li>
-            <Link className="Link" to="/profile">
+            <Link className="Link" href="/profile">
               Profile
             </Link>
           </li>
           <li>
-            <Link className="Link" to="/blog">
+            <Link className="Link" href="/blog">
               Blog
             </Link>
           </li>
           <li>
-            <Link className="Link" to="/contact">
+            <Link className="Link" href="/contact">
               Contact
             </Link>
           </li>
           <li>
-            <Link className="Link" to="/about">
+            <Link className="Link" href="/about">
               About
             </Link>
           </li>
 
           {/* <li>
-            <Link className="Link" to="/assignment-3">
+            <Link className="Link" href="/assignment-3">
               assignment-3
             </Link>
           </li> */}

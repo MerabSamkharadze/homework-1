@@ -6,7 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Content from "./Components/Content/Content";
 import Contact from "./Components/Contact/Contact";
-import About from "./Components/About/About";
+import About from "./app/about/page";
 // import Temporary from "./Components/Temporary/Temporary";
 import Blog from "./Components/Blog/Blog";
 import Profile from "./Components/Profile/Profile";

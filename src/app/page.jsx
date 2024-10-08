@@ -1,6 +1,5 @@
 import React from "react";
-import "./Content.css";
-import ProductList from "../ProductList/ProductList";
+import ProductList from "../Components/productList/page";
 
 export default function Content() {
   const products = [
