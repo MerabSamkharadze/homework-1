@@ -10,7 +10,6 @@ export default function ProductList() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-
   async function getProducts() {
     try {
       const res = await axios.get("https://dummyjson.com/products");
@@ -37,7 +36,8 @@ export default function ProductList() {
               key={product.id}
               title={product.title}
               description={product.description}
-              image={product.thumbnail} 
+              image={product.thumbnail}
+              price={product.price}
             />
           ))}
         </div>

@@ -1,9 +1,9 @@
-
 .loader {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   background-color: rgba(240, 177, 82, 0.642);
 }
 
