@@ -38,7 +38,7 @@ export default function Page({ params }) {
         ))}
       </div>
 
-      <h1 className="product-title">{products.title}</h1>
+      <h1 className="product-titlee">{products.title}</h1>
 
       <div className="product-info">
         <div className="product-description">
