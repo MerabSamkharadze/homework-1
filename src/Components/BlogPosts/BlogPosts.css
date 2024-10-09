@@ -2,8 +2,6 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
 }
 
 .page-title {
@@ -22,8 +20,6 @@
 .posts-container {
   font-size: 2rem;
   flex-grow: 1;
-  overflow-y: scroll;
-  padding-right: 1rem;
 }
 
 .post {
@@ -32,6 +28,35 @@
   border-radius: 0.8rem;
   background-color: #fcebc7b9;
   margin-top: 1rem;
+  transition: all 0.2s;
+}
+
+.reactions-container {
+  margin-top: 2rem;
+  /* background-color: #e59203; */
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+.like-dislike {
+  color: rgb(12, 97, 9);
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.views {
+  width: 5rem;
+  height: 100%;
+  width: 10px;
+}
+
+.post:hover {
+  background-color: #fcebc79c;
+  transform: scale(1.01);
 }
 
 .post-title {

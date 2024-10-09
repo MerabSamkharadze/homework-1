@@ -9,6 +9,7 @@
   background: linear-gradient(to right, rgb(102, 4, 48), rgb(133, 34, 4));
   padding: 1rem 2rem;
   color: white;
+  z-index: 999;
 }
 
 nav .Header-ul {
