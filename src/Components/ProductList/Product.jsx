@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Loader from "../Loader/Loader";
 import axios from "axios";
 import Product from "../Product/Product";
+import Link from "next/link";
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
@@ -32,13 +33,18 @@ export default function ProductList() {
       ) : (
         <div className="product-grid">
           {products.map((product) => (
-            <Product
+            <Link
+              className="Link"
+              href={`/products/${product.id}`}
               key={product.id}
-              title={product.title}
-              description={product.description}
-              image={product.thumbnail}
-              price={product.price}
-            />
+            >
+              <Product
+                title={product.title}
+                description={product.description}
+                image={product.thumbnail}
+                price={product.price}
+              />
+            </Link>
           ))}
         </div>
       )}

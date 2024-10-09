@@ -10,11 +10,6 @@ export default function Header() {
       <nav>
         <ul className="Header-ul">
           <li>
-            <Link className="Link" href="/">
-              Home
-            </Link>
-          </li>
-          <li>
             <Link className="Link" href="/profile">
               Profile
             </Link>
@@ -22,6 +17,11 @@ export default function Header() {
           <li>
             <Link className="Link" href="/blog">
               Blog
+            </Link>
+          </li>
+          <li>
+            <Link className="Link" href="/products">
+              Products
             </Link>
           </li>
           <li>

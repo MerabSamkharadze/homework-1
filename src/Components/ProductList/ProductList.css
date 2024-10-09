@@ -5,3 +5,18 @@
   gap: 2rem;
   padding: 2rem;
 }
+.Link {
+  color: inherit;
+}
+
+@media (max-width: 1000px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

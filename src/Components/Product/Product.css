@@ -4,11 +4,17 @@
   text-align: center;
   background-color: rgba(250, 235, 215, 0.817);
   border-radius: 0.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.product:hover {
+  transform: scale(1.02);
 }
 
 .product-image {
-  width: 100%;
-  height: 15rem;
+  width: 10rem;
+  height: 10rem;
+
   object-fit: cover;
 }
 
@@ -27,4 +33,5 @@
   color: green;
   font-size: 1.6rem;
   font-weight: 500;
+  background-color: rgba(236, 179, 138, 0.873);
 }

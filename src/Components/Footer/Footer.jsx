@@ -9,11 +9,7 @@ export default function Footer() {
       <div className="Footer-content">
         <nav>
           <ul className="Footer-nav">
-            <li>
-              <Link className="Link" href="/">
-                Home
-              </Link>
-            </li>
+            
             <li>
               <Link className="Link" href="/profile">
                 Profile
@@ -22,6 +18,11 @@ export default function Footer() {
             <li>
               <Link className="Link" href="/blog">
                 Blog
+              </Link>
+            </li>
+            <li>
+              <Link className="Link" href="/products">
+                Products
               </Link>
             </li>
             <li>
