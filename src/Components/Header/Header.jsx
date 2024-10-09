@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="Header">
       <Link className="Header-logo Link" href="/">
-        Geo Cuisine
+        Geo Market
       </Link>
       <nav>
         <ul className="Header-ul">

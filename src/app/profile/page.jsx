@@ -22,7 +22,7 @@ export default function Profile() {
         imgSrc={imgSrc}
         name={"ალიოშა"}
         surname={"ბრეგვაძე"}
-        email={"giorgi.kartvelishvili@example.com"}
+        email={"Aliosha.bregvadze@gmail.com"}
       />
     </div>
   );

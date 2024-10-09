@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Loader from "../Loader/Loader";
 import "./BlogPosts.css";
 import axios from "axios";
@@ -38,10 +38,10 @@ export default function BlogPosts() {
                 <p className="post-content">{post.body}</p>
                 <div className="reactions-container">
                   <div className="like-dislike">
-                    <div className="like">{post.reactions.likes}</div>
-                    <div className="dislike">{post.reactions.dislikes}</div>
+                    <div className="like">👍 {post.reactions.likes}</div>
+                    <div className="dislike">👎 {post.reactions.dislikes}</div>
                   </div>
-                  <div className="views">{post.views}</div>
+                  <div className="views">views:{post.views}</div>
                 </div>
               </div>
             </Link>

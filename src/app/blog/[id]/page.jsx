@@ -35,8 +35,8 @@ export default function Page({ params }) {
       </div>
 
       <div className="post-reactions">
-        <strong>👍</strong> {posts.reactions.likes} <strong>👎</strong>
-        {posts.reactions.dislikes}
+        <div className="like-dislikes">👍 {posts.reactions.likes}</div>{" "}
+        <div className="like-dislikes">👎 {posts.reactions.dislikes}</div>
       </div>
 
       <div className="post-views">Views: {posts.views}</div>

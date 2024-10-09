@@ -33,7 +33,8 @@
 
 .reactions-container {
   margin-top: 2rem;
-  /* background-color: #e59203; */
+  background-color: #e5920335;
+  border-radius: 2rem;
   height: 2rem;
   display: flex;
   align-items: center;
@@ -48,10 +49,19 @@
   align-items: center;
   justify-content: space-between;
 }
+.like,
+.dislike {
+  font-size: 1.3rem;
+}
+
 .views {
-  width: 5rem;
-  height: 100%;
+  color: rgba(114, 113, 113, 0.736);
+  width: 20rem;
   width: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
 }
 
 .post:hover {

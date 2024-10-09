@@ -1,4 +1,5 @@
 .post-container {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBEcSz8akZdGobyGoENGcRHbTPcfMa1Gn0EQ&s");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,19 +14,19 @@
 }
 
 .post-title {
-  color: rgb(248, 152, 34);
-  font-size: 3rem;
+  color: rgb(166, 94, 7);
+  font-size: 3.5rem;
   margin-bottom: 2rem;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .post-body {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 1.8;
   color: #333;
   margin-bottom: 2rem;
-  background-color: rgba(231, 249, 255, 0.7);
+  background-color: rgba(187, 231, 245, 0.582);
   border-left: 0.5rem solid rgb(245, 167, 71);
   padding: 1.5rem;
   border-radius: 0.5rem;
@@ -34,7 +35,7 @@
 .post-meta,
 .post-reactions,
 .post-views {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   margin-top: 1.5rem;
   color: #222121;
 }
@@ -50,6 +51,7 @@
   background-color: rgba(251, 206, 206, 0.7);
   padding: 1.5rem;
   border-radius: 0.5rem;
+  font-size: 1.3rem;
 }
 
 .reaction {
@@ -66,10 +68,16 @@
   color: rgb(247, 158, 50);
 }
 
+.like-dislikes {
+  font-size: 1.5rem;
+  color: rgb(14, 113, 17);
+  font-weight: 700;
+}
+
 .post-views {
   text-align: center;
   margin-top: 2.5rem;
-  color: rgba(34, 189, 236, 0.8);
+  color: rgba(4, 119, 154, 0.962);
 
   font-size: 2rem;
 }
