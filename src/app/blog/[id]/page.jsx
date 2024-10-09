@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Loader from "@/Components/Loader/Loader";
 import axios from "axios";
 import "./page.css";
 
@@ -6,8 +10,20 @@ async function fetchPosts(id) {
   return response.data;
 }
 
-export default async function Page({ params }) {
-  const posts = await fetchPosts(params.id);
+export default function Page({ params }) {
+  const [posts, setPosts] = useState(null);
+
+  useEffect(() => {
+    async function loadPost() {
+      const data = await fetchPosts(params.id);
+      setPosts(data);
+    }
+    loadPost();
+  }, [params.id]);
+
+  if (!posts) {
+    return <Loader />;
+  }
 
   return (
     <div className="post-container">
