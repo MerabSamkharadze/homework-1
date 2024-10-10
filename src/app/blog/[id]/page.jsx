@@ -4,22 +4,36 @@ import { useEffect, useState } from "react";
 import Loader from "@/Components/Loader/Loader";
 import axios from "axios";
 import "./page.css";
+import PageNotFound from "@/Components/PageNotFound/PageNotFound";
 
 async function fetchPosts(id) {
-  const response = await axios.get(`https://dummyjson.com/posts/${id}`);
-  return response.data;
+  try {
+    const response = await axios.get(`https://dummyjson.com/posts/${id}`);
+    return response.data;
+  } catch (error) {
+    return null;
+  }
 }
 
 export default function Page({ params }) {
   const [posts, setPosts] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     async function loadPost() {
       const data = await fetchPosts(params.id);
-      setPosts(data);
+      if (!data) {
+        setError(true);
+      } else {
+        setPosts(data);
+      }
     }
     loadPost();
   }, [params.id]);
+
+  if (error) {
+    return <PageNotFound />;
+  }
 
   if (!posts) {
     return <Loader />;

@@ -4,25 +4,39 @@ import { useEffect, useState } from "react";
 import Loader from "@/Components/Loader/Loader";
 import axios from "axios";
 import "./page.css";
+import PageNotFound from "@/Components/PageNotFound/PageNotFound";
 
 async function fetchProducts(id) {
-  const response = await axios.get(`https://dummyjson.com/products/${id}`);
-  return response.data;
+  try {
+    const response = await axios.get(`https://dummyjson.com/products/${id}`);
+    return response.data;
+  } catch (error) {
+    if (error.response && error.response.status === 404) {
+      return null;
+    }
+    throw error;
+  }
 }
 
 export default function Page({ params }) {
   const [products, setProducts] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadProduct() {
       const data = await fetchProducts(params.id);
       setProducts(data);
+      setLoading(false);
     }
     loadProduct();
   }, [params.id]);
 
-  if (!products) {
+  if (loading) {
     return <Loader />;
+  }
+
+  if (!products) {
+    return <PageNotFound />;
   }
 
   return (
