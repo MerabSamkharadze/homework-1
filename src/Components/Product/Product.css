@@ -6,6 +6,7 @@
   border-radius: 0.5rem;
   transition: all 0.2s;
   cursor: pointer;
+  height: 100%;
 }
 .product:hover {
   transform: scale(1.02);
