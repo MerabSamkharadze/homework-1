@@ -1,15 +1,16 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import Loader from "@/Components/Loader/Loader";
-import axios from "axios";
 import "./page.css";
 import PageNotFound from "@/Components/PageNotFound/PageNotFound";
 
-async function fetchProducts(id) {
+async function fetchProduct(id) {
   try {
-    const response = await axios.get(`https://dummyjson.com/products/${id}`);
-    return response.data;
+    const response = await fetch(`https://dummyjson.com/products/${id}`);
+    if (!response.ok) {
+      if (response.status === 404) {
+        return null;
+      }
+      throw new Error("Failed to fetch product");
+    }
+    return await response.json();
   } catch (error) {
     if (error.response && error.response.status === 404) {
       return null;
@@ -18,22 +19,8 @@ async function fetchProducts(id) {
   }
 }
 
-export default function Page({ params }) {
-  const [products, setProducts] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function loadProduct() {
-      const data = await fetchProducts(params.id);
-      setProducts(data);
-      setLoading(false);
-    }
-    loadProduct();
-  }, [params.id]);
-
-  if (loading) {
-    return <Loader />;
-  }
+export default async function Page({ params }) {
+  const products = await fetchProduct(params.id);
 
   if (!products) {
     return <PageNotFound />;
