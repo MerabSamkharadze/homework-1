@@ -1,59 +1,38 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import Loader from "@/Components/Loader/Loader";
-import axios from "axios";
-import "./page.css";
 import PageNotFound from "@/Components/PageNotFound/PageNotFound";
+import "./page.css";
 
 async function fetchPosts(id) {
   try {
-    const response = await axios.get(`https://dummyjson.com/posts/${id}`);
-    return response.data;
+    const response = await fetch(`https://dummyjson.com/posts/${id}`);
+    const data = await response.json();
+    return data;
   } catch (error) {
     return null;
   }
 }
 
-export default function Page({ params }) {
-  const [posts, setPosts] = useState(null);
-  const [error, setError] = useState(false);
+export default async function Page({ params }) {
+  const post = await fetchPosts(params.id);
 
-  useEffect(() => {
-    async function loadPost() {
-      const data = await fetchPosts(params.id);
-      if (!data) {
-        setError(true);
-      } else {
-        setPosts(data);
-      }
-    }
-    loadPost();
-  }, [params.id]);
-
-  if (error) {
+  if (!post) {
     return <PageNotFound />;
-  }
-
-  if (!posts) {
-    return <Loader />;
   }
 
   return (
     <div className="post-container">
-      <h1 className="post-title">{posts.title}</h1>
-      <p className="post-body">{posts.body}</p>
+      <h1 className="post-title">{post.title}</h1>
+      <p className="post-body">{post.body}</p>
 
       <div className="post-meta">
-        <strong>Tags:</strong> {posts.tags.join(", ")}
+        <strong>Tags:</strong> {post.tags.join(", ")}
       </div>
 
       <div className="post-reactions">
-        <div className="like-dislikes">👍 {posts.reactions.likes}</div>{" "}
-        <div className="like-dislikes">👎 {posts.reactions.dislikes}</div>
+        <div className="like-dislikes">👍 {post.reactions.likes}</div>
+        <div className="like-dislikes">👎 {post.reactions.dislikes}</div>
       </div>
 
-      <div className="post-views">Views: {posts.views}</div>
+      <div className="post-views">Views: {post.views}</div>
     </div>
   );
 }

@@ -4,15 +4,12 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url("https://e66fkes8nnn.exactdn.com/wp-content/uploads/2017/06/Home-page-1-Elegant-supra.jpg?strip=all&lossy=1&ssl=1")
-    no-repeat center center;
-  background-size: cover;
   padding: 2rem;
 }
 .about-us {
   display: flex;
   flex-direction: column;
-  background-color: rgba(250, 235, 215, 0.645);
+  background-color: rgba(250, 235, 215, 0.843);
   padding: 5rem;
 }
 .about-us h1 {
