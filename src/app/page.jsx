@@ -5,7 +5,7 @@ export default function Content() {
     <div className="main-container">
       <h1 className="hello-text">welcome to Geo Market</h1>
       <h2 className="losung-text">
-        Here you will find all the products you are looking for.
+        Here you can discover a wide variety of products.
       </h2>
 
       <Button content={"Log In / Registration"} backgroundColor={"brown"} />

@@ -2,19 +2,7 @@ import "./ProductList.css";
 import Product from "../Product/Product";
 import Link from "next/link";
 
-async function getProducts() {
-  try {
-    const res = await fetch("https://dummyjson.com/products");
-    const data = await res.json();
-    return data.products;
-  } catch (error) {
-    console.error("Error fetching products:", error);
-    return [];
-  }
-}
-
-export default async function ProductList() {
-  const products = await getProducts();
+export default function ProductList({ products }) {
   return (
     <div className="container">
       <div className="product-grid">

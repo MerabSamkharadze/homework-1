@@ -11,12 +11,22 @@
   color: rgb(100, 56, 5);
   background-color: bisque;
   padding: 1rem 2rem;
+  transition: all 0.3s;
+}
+.hello-text:hover {
+  transform: rotate(4deg);
 }
 
 .losung-text {
+  margin-top: 1rem;
   font-size: 4rem;
   font-weight: 600;
   color: rgb(243, 220, 193);
   background-color: chocolate;
   padding: 2rem 3rem;
+  transition: all 0.3s;
+  z-index: 10;
+}
+.losung-text:hover {
+  transform: rotate(5deg);
 }

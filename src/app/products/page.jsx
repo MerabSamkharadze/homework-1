@@ -2,10 +2,23 @@ import ProductList from "@/Components/ProductList/Product";
 
 import "./page.css";
 
-export default function Content() {
+async function getProducts() {
+  try {
+    const res = await fetch("https://dummyjson.com/products");
+    const data = await res.json();
+    return data.products;
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    return [];
+  }
+}
+
+export default async function Content() {
+  const products = await getProducts();
+
   return (
     <div className="main-container">
-      <ProductList />
+      <ProductList products={products} />
     </div>
   );
 }
