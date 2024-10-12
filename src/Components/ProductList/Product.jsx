@@ -3,6 +3,7 @@
 import "./ProductList.css";
 import Product from "../Product/Product";
 import Link from "next/link";
+import SearchBar from "../SearchBar/SearchBar";
 
 export default function ProductList({ products }) {
   return (
@@ -22,6 +23,7 @@ export default function ProductList({ products }) {
         </Link>
       </div>
 
+      <SearchBar />
       <div className="product-grid">
         {products.map((product) => (
           <Link

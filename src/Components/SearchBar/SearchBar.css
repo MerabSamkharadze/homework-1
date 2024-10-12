@@ -1,0 +1,23 @@
+.search-controls {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-controls label {
+  margin-right: 10px; /* სხვაობა ლეიბლსა და ველზე */
+  font-weight: bold;
+}
+
+.search-controls input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px; /* ფართობის განსაზღვრა */
+  transition: border-color 0.3s ease;
+}
+
+.search-controls input:focus {
+  border-color: #4caf50; /* გამ绿ებული საზღვრები */
+  outline: none; /* მახასიათებლის მოშორება */
+}
