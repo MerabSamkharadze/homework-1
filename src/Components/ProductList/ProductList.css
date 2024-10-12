@@ -8,49 +8,47 @@
 .Link {
   color: inherit;
 }
-.sort-options {
-  background-color: antiquewhite;
+
+/* სორტირება */
+.container {
+  margin-top: 8rem;
+}
+.sort-controls {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
-  margin-top: 6rem;
-  margin-bottom: 2rem;
-}
-.sort-options select {
-  padding: 8px 12px;
-  font-size: 16px;
-  font-family: "Arial", sans-serif;
-  color: #333;
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
-}
-.sort-options {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.sort-options label {
-  padding: 1rem 2rem;
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: rgb(124, 26, 8);
-  margin-right: 2rem;
+  margin: 2rem 0;
+  background-color: antiquewhite;
+  padding: 2rem 1rem;
 }
 
-.sort-options select {
-  text-align: center;
-  font-size: 1.6rem;
-  display: block;
-  padding: 1rem;
-  cursor: pointer;
+.sort-link {
+  padding: 1rem 2rem;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.sort-link:hover {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.sort-link:focus,
+.sort-link:active,
+.sort-link:active {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+/* რესპონსიულობა */
 
 @media (max-width: 1000px) {
   .product-grid {

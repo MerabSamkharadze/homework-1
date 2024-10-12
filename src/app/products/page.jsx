@@ -1,10 +1,11 @@
 import ProductList from "@/Components/ProductList/Product";
-
 import "./page.css";
 
-async function getProducts() {
+async function getProducts(sortBy = "title", order = "asc") {
   try {
-    const res = await fetch("https://dummyjson.com/products");
+    const res = await fetch(
+      `https://dummyjson.com/products?sortBy=${sortBy}&order=${order}`
+    );
     const data = await res.json();
     return data.products;
   } catch (error) {
@@ -13,8 +14,11 @@ async function getProducts() {
   }
 }
 
-export default async function Content() {
-  const products = await getProducts();
+export default async function Content({ searchParams }) {
+  const sortBy = searchParams?.sortBy || "title";
+  const order = searchParams?.order || "asc";
+
+  const products = await getProducts(sortBy, order);
 
   return (
     <div className="main-container">
