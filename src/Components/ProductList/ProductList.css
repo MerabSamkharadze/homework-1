@@ -8,6 +8,49 @@
 .Link {
   color: inherit;
 }
+.sort-options {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+.sort-options select {
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+.sort-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sort-options label {
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: rgb(124, 26, 8);
+  margin-right: 2rem;
+}
+
+.sort-options select {
+  text-align: center;
+  font-size: 1.6rem;
+  display: block;
+  padding: 1rem;
+  cursor: pointer;
+}
 
 @media (max-width: 1000px) {
   .product-grid {
