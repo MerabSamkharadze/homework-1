@@ -17,42 +17,14 @@
 .sort-container {
   padding: 1rem 2rem;
   display: flex;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
   background-color: antiquewhite;
 }
-.sort-controls {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  margin: 2rem 0;
-  padding: 2rem 1rem;
-}
-
-.sort-link {
+.sort-select {
+  width: 15rem;
   padding: 1rem 2rem;
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: #333;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.sort-link:hover {
-  background-color: #4caf50;
-  color: white;
-  border-color: #4caf50;
-}
-
-.sort-link:focus,
-.sort-link:active,
-.sort-link:active {
-  background-color: #4caf50;
-  color: white;
-  border-color: #4caf50;
 }
 
 /* რესპონსიულობა */
