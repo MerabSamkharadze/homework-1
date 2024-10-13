@@ -23,8 +23,10 @@
   background-color: antiquewhite;
 }
 .sort-select {
-  width: 15rem;
+  width: 13rem;
   padding: 1rem 2rem;
+  border-radius: 1rem;
+  appearance: none;
 }
 
 /* რესპონსიულობა */
