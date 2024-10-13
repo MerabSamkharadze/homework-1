@@ -1,18 +1,35 @@
+// SearchBar.js
 "use client";
 
 import "./SearchBar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+
+// Debounce function
+function debounce(func, delay) {
+  let timeoutId;
+  return (...args) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+}
 
 export default function SearchBar() {
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
 
+  const handleSearch = debounce((value) => {
+    router.push(`/products?search=${value}`);
+  }, 2000);
+
   const handleSearchChange = (e) => {
     const value = e.target.value;
     setSearchQuery(value);
-
-    router.push(`/products?search=${value}`);
+    handleSearch(value);
   };
 
   return (

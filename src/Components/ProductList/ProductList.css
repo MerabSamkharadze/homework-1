@@ -11,7 +11,7 @@
 
 /* სორტირება */
 .container {
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 .sort-controls {
   display: flex;
@@ -28,7 +28,7 @@
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #333;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;

@@ -10,19 +10,18 @@ export default function ProductList({ products, onSearch }) {
     <div className="container">
       <div className="sort-controls">
         <Link href="/products?sortBy=title&order=asc" className="sort-link">
-          Sort by Title (Ascending)
+          Sort by Title (Asc)
         </Link>
         <Link href="/products?sortBy=title&order=desc" className="sort-link">
-          Sort by Title (Descending)
+          Sort by Title (Desc)
         </Link>
         <Link href="/products?sortBy=price&order=asc" className="sort-link">
-          Sort by Price (Ascending)
+          Sort by Price (Asc)
         </Link>
         <Link href="/products?sortBy=price&order=desc" className="sort-link">
-          Sort by Price (Descending)
+          Sort by Price (Desc)
         </Link>
       </div>
-
       <SearchBar onSearch={onSearch} />
 
       <div className="product-grid">
