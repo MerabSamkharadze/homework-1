@@ -11,14 +11,21 @@
 
 /* სორტირება */
 .container {
+  min-height: 100vh;
   margin-top: 4rem;
+}
+.sort-container {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
 }
 .sort-controls {
   display: flex;
   gap: 2rem;
   justify-content: center;
   margin: 2rem 0;
-  background-color: antiquewhite;
   padding: 2rem 1rem;
 }
 

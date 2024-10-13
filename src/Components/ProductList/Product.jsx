@@ -2,33 +2,36 @@
 
 import "./ProductList.css";
 import Product from "../Product/Product";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import SearchBar from "../SearchBar/SearchBar";
 
 export default function ProductList({ products, onSearch }) {
+  const router = useRouter();
+
+  const handleSort = (event) => {
+    const [sortBy, order] = event.target.value.split("-");
+    router.push(`/products?sortBy=${sortBy}&order=${order}`);
+  };
+
   return (
     <div className="container">
-      <div className="sort-controls">
-        <Link href="/products?sortBy=title&order=asc" className="sort-link">
-          Sort by Title (Asc)
-        </Link>
-        <Link href="/products?sortBy=title&order=desc" className="sort-link">
-          Sort by Title (Desc)
-        </Link>
-        <Link href="/products?sortBy=price&order=asc" className="sort-link">
-          Sort by Price (Asc)
-        </Link>
-        <Link href="/products?sortBy=price&order=desc" className="sort-link">
-          Sort by Price (Desc)
-        </Link>
+      <div className="sort-container">
+        <div className="sort-controls">
+          <select className="sort-select" onChange={handleSort}>
+            <option value="title-asc">Sort by Title (Asc)</option>
+            <option value="title-desc">Sort by Title (Desc)</option>
+            <option value="price-asc">Sort by Price (Asc)</option>
+            <option value="price-desc">Sort by Price (Desc)</option>
+          </select>
+        </div>
+        <SearchBar onSearch={onSearch} />
       </div>
-      <SearchBar onSearch={onSearch} />
 
       <div className="product-grid">
         {products.map((product) => (
-          <Link
+          <div
             className="Link"
-            href={`/products/${product.id}`}
+            onClick={() => router.push(`/products/${product.id}`)}
             key={product.id}
           >
             <Product
@@ -37,7 +40,7 @@ export default function ProductList({ products, onSearch }) {
               image={product.thumbnail}
               price={product.price}
             />
-          </Link>
+          </div>
         ))}
       </div>
     </div>
