@@ -5,7 +5,7 @@ import Product from "../Product/Product";
 import Link from "next/link";
 import SearchBar from "../SearchBar/SearchBar";
 
-export default function ProductList({ products }) {
+export default function ProductList({ products, onSearch }) {
   return (
     <div className="container">
       <div className="sort-controls">
@@ -23,7 +23,8 @@ export default function ProductList({ products }) {
         </Link>
       </div>
 
-      <SearchBar />
+      <SearchBar onSearch={onSearch} />
+
       <div className="product-grid">
         {products.map((product) => (
           <Link

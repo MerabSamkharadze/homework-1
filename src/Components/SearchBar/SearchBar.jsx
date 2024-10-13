@@ -2,13 +2,17 @@
 
 import "./SearchBar.css";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar() {
   const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
 
   const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
-    onSearch(e.target.value);
+    const value = e.target.value;
+    setSearchQuery(value);
+
+    router.push(`/products?search=${value}`);
   };
 
   return (
