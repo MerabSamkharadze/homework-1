@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "./page.css";
 import PageNotFound from "@/Components/PageNotFound/PageNotFound";
 
@@ -30,10 +31,12 @@ export default async function Page({ params }) {
     <div className="product-container">
       <div className="product-images">
         {products.images.map((image, index) => (
-          <img
+          <Image
             key={index}
             src={image}
             alt={products.title}
+            width={200}
+            height={200}
             className="product-imagee"
           />
         ))}
