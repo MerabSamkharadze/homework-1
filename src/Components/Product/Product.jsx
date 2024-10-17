@@ -10,7 +10,7 @@ export default function Product({ title, description, image, price }) {
         src={image}
         alt={title}
         width={100}
-        height={120}
+        height={100}
         className="product-image"
       />
       <h2 className="product-title">{title}</h2>

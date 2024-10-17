@@ -35,8 +35,8 @@ export default async function Page({ params }) {
             key={index}
             src={image}
             alt={products.title}
-            width={200}
-            height={200}
+            width={100}
+            height={100}
             className="product-imagee"
           />
         ))}
