@@ -30,16 +30,13 @@ export default async function Page({ params }) {
   return (
     <div className="product-container">
       <div className="product-images">
-        {products.images.map((image, index) => (
-          <Image
-            key={index}
-            src={image}
-            alt={products.title}
-            width={100}
-            height={100}
-            className="product-imagee"
-          />
-        ))}
+        <Image
+          src={products.images[0]}
+          alt={products.title}
+          width={100}
+          height={100}
+          className="product-imagee"
+        />
       </div>
 
       <h1 className="product-titlee">{products.title}</h1>
