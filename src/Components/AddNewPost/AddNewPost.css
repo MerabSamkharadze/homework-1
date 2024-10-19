@@ -1,0 +1,19 @@
+.addIcon {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 600;
+  color: green;
+  position: fixed;
+  bottom: 5rem;
+  right: 10rem;
+  z-index: 30;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.addIcon:hover {
+  transform: scale(1.05);
+}
