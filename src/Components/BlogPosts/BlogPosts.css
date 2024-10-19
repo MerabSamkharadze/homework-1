@@ -20,6 +20,7 @@
 .posts-container {
   font-size: 2rem;
   flex-grow: 1;
+  min-height: 100vh;
 }
 
 .post {
@@ -29,6 +30,7 @@
   background-color: #fcebc7b9;
   margin-top: 1rem;
   transition: all 0.2s;
+  position: relative;
 }
 
 .post:hover {

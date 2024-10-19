@@ -8,6 +8,7 @@ import Return from "@/public/svg/Return";
 
 export default function BlogPosts({ posts }) {
   const [localPosts, setLocalPosts] = useState([]);
+  const [postss, setPostss] = useState([...posts]);
 
   useEffect(() => {
     const savedPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
@@ -21,14 +22,13 @@ export default function BlogPosts({ posts }) {
         <h1 className="page-title">Posts</h1>
         <div className="posts-container">
           {/* Fetched Posts */}
-          {posts.map((post) => (
+          {postss.map((post) => (
             <Link key={post.id} href={`/blog/${post.id}`} className="Link">
               <div className="post">
                 <div
                   onClick={(event) => {
                     event.preventDefault();
-                    posts.splice(post.id - 1, 1);
-                    console.log(post.id);
+                    setPostss(postss.filter((pos) => pos.id !== post.id));
                   }}
                   className="deletePost"
                 >
