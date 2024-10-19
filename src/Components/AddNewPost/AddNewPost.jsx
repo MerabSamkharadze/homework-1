@@ -11,7 +11,7 @@ export default function AddNewPost({ setLocalPosts }) {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
@@ -20,7 +20,7 @@ export default function AddNewPost({ setLocalPosts }) {
         id: Date.now(),
         title: title,
         body: content,
-        reactions: { likes: "455", dislikes: "3" },
+        reactions: { likes: "0", dislikes: "0" },
       };
       const newPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
       newPosts.push(post);

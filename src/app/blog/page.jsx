@@ -1,9 +1,9 @@
 import "./Blog.css";
 import BlogPosts from "../../Components/BlogPosts/BlogPosts";
-import FetchPosts from "@/utils/fetchPosts";
+import fetchPosts from "@/utils/FetchPosts";
 
 export default async function Blog() {
-  const postsData = await FetchPosts();
+  const postsData = await fetchPosts();
 
   return (
     <section className="Blog">

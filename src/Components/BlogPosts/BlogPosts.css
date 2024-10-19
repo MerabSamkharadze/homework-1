@@ -31,6 +31,11 @@
   transition: all 0.2s;
 }
 
+.post:hover {
+  background-color: #fcebc79c;
+  transform: scale(1.01);
+}
+
 .reactions-container {
   margin-top: 2rem;
   background-color: #e5920335;
@@ -63,11 +68,6 @@
   font-size: 1.3rem;
 }
 
-.post:hover {
-  background-color: #fcebc79c;
-  transform: scale(1.01);
-}
-
 .post-title {
   margin-bottom: 1rem;
   font-size: 2.4rem;
@@ -83,4 +83,13 @@
 .Link {
   text-decoration: none;
   color: inherit;
+}
+
+.deletePost {
+  width: 3rem;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
