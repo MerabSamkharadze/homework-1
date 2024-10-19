@@ -1,13 +1,13 @@
-import React from "react";
 import "./Blog.css";
 import BlogPosts from "../../Components/BlogPosts/BlogPosts";
-import AddNewPost from "@/Components/AddNewPost/AddNewPost";
+import FetchPosts from "@/utils/fetchPosts";
 
-export default function Blog() {
+export default async function Blog() {
+  const postsData = await FetchPosts();
+
   return (
     <section className="Blog">
-      <AddNewPost />
-      <BlogPosts />
+      <BlogPosts posts={postsData} />
     </section>
   );
 }

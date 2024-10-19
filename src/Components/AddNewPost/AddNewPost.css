@@ -7,8 +7,8 @@
   font-weight: 600;
   color: green;
   position: fixed;
-  bottom: 5rem;
-  right: 10rem;
+  bottom: 16rem;
+  right: 5rem;
   z-index: 30;
   cursor: pointer;
   transition: all 0.2s;
@@ -46,7 +46,7 @@ form textarea {
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
   font-size: 1.7rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -90,4 +90,9 @@ form button:hover {
   position: absolute;
   right: 5rem;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.return:hover {
+  transform: scale(1.1);
 }

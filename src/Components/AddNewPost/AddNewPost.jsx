@@ -4,32 +4,29 @@ import AddSvg from "@/public/svg/AddSvg";
 import Return from "@/public/svg/Return";
 import { useState } from "react";
 
-export default function AddNewPost({ addBlogPost }) {
+export default function AddNewPost({ setLocalPosts }) {
   const [blanc, setBlanc] = useState(false);
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // ფორმის სუბმიტი
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const response = await fetch("https://dummyjson.com/posts/add", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          title: title,
-          body: content,
-          userId: 123456,
-        }),
-      });
-
-      const newPost = await response.json();
-      addBlogPost(newPost); // ბლოგპოსტის დამატება state-ში
-      setTitle(""); // ფორმის ველების გასუფთავება
+      const post = {
+        id: Date.now(),
+        title: title,
+        body: content,
+        reactions: { likes: "455", dislikes: "3" },
+      };
+      const newPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
+      newPosts.push(post);
+      localStorage.setItem("posts", JSON.stringify(newPosts));
+      setLocalPosts(newPosts);
+      setTitle("");
       setContent("");
     } catch (error) {
       console.error("Error creating post:", error);
