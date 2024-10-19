@@ -13,7 +13,8 @@ async function fetchPosts() {
 }
 
 export default async function BlogPosts() {
-  const posts = await fetchPosts();
+  const postsData = await fetchPosts();
+  const posts = [...postsData];
 
   return (
     <div className="container">
