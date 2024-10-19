@@ -1,13 +1,13 @@
 .addIcon {
-  width: 10rem;
-  height: 10rem;
+  width: 7rem;
+  height: 7rem;
   display: flex;
   flex-direction: column;
   font-size: 2rem;
   font-weight: 600;
   color: green;
   position: fixed;
-  bottom: 16rem;
+  bottom: 5.9rem;
   right: 5rem;
   z-index: 30;
   cursor: pointer;

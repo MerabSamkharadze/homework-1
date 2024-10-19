@@ -3,11 +3,15 @@
 import Link from "next/link";
 import "./BlogPosts.css";
 import AddNewPost from "../AddNewPost/AddNewPost";
-import { useState } from "react";
-const items = JSON.parse(localStorage.getItem("posts") ?? "[]");
+import { useState, useEffect } from "react";
 
 export default function BlogPosts({ posts }) {
-  const [localPosts, setLocalPosts] = useState(items);
+  const [localPosts, setLocalPosts] = useState([]);
+
+  useEffect(() => {
+    const savedPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
+    setLocalPosts(savedPosts);
+  }, []);
 
   return (
     <>
@@ -15,6 +19,7 @@ export default function BlogPosts({ posts }) {
       <div className="container">
         <h1 className="page-title">Posts</h1>
         <div className="posts-container">
+          {/* Fetched Posts */}
           {posts.map((post) => (
             <Link key={post.id} href={`/blog/${post.id}`} className="Link">
               <div className="post">
@@ -30,6 +35,8 @@ export default function BlogPosts({ posts }) {
               </div>
             </Link>
           ))}
+
+          {/* Local Posts */}
           {localPosts.map((post) => (
             <Link key={post.id} href={`/blog/#`} className="Link">
               <div className="post">
@@ -37,10 +44,12 @@ export default function BlogPosts({ posts }) {
                 <p className="post-content">{post.body}</p>
                 <div className="reactions-container">
                   <div className="like-dislike">
-                    <div className="like">👍 {post.reactions.likes}</div>
-                    <div className="dislike">👎 {post.reactions.dislikes}</div>
+                    <div className="like">👍 {post.reactions?.likes ?? 0}</div>
+                    <div className="dislike">
+                      👎 {post.reactions?.dislikes ?? 0}
+                    </div>
                   </div>
-                  <div className="views">views: {post.views}</div>
+                  <div className="views">views: {post.views ?? 0}</div>
                 </div>
               </div>
             </Link>

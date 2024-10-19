@@ -26,6 +26,7 @@ export default function AddNewPost({ setLocalPosts }) {
       newPosts.push(post);
       localStorage.setItem("posts", JSON.stringify(newPosts));
       setLocalPosts(newPosts);
+      setBlanc(false);
       setTitle("");
       setContent("");
     } catch (error) {
