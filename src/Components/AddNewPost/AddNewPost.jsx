@@ -40,7 +40,7 @@ export default function AddNewPost({ setLocalPosts }) {
     <>
       {blanc && (
         <div className="blog-blanc">
-          <form onSubmit={handleSubmit}>
+          <form className="post-form" onSubmit={handleSubmit}>
             <div
               onClick={() => {
                 setBlanc(false);

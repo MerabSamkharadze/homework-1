@@ -7,7 +7,7 @@ export default function Contact() {
     <div className="contact-container">
       <h1>დაგვიკავშირდით</h1>
 
-      <form>
+      <form className="contact-form">
         <div>
           <label htmlFor="name">სახელი:</label>
           <input

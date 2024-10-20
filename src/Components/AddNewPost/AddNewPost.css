@@ -20,7 +20,7 @@
 
 .blog-blanc {
   width: 60vw;
-  height: 70vh;
+  height: 75vh;
   border-radius: 1rem;
   position: fixed;
   top: 50%;
@@ -33,16 +33,16 @@
 
 /* form */
 
-form {
+.post-form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 3rem;
+  padding: 2rem;
   margin: 0 auto;
 }
 
-form input,
-form textarea {
+.post-form input,
+.post-form textarea {
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
@@ -52,25 +52,25 @@ form textarea {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-form input:focus,
-form textarea:focus {
+.post-form input:focus,
+.post-form textarea:focus {
   border-color: #3498db;
   box-shadow: 0 0.5rem 1rem rgba(52, 152, 219, 0.5);
   outline: none;
 }
 
-form label {
+.post-form label {
   font-weight: bold;
   margin-bottom: 0.5rem;
   font-size: 2rem;
 }
 
-form textarea {
+.post-form textarea {
   min-height: 20rem;
   resize: none;
 }
 
-form button {
+.post-form button {
   padding: 0.75rem;
   background-color: rgb(6, 168, 6);
   color: white;
@@ -81,7 +81,7 @@ form button {
   transition: background-color 0.3s ease;
 }
 
-form button:hover {
+.post-form button:hover {
   background-color: green;
 }
 
