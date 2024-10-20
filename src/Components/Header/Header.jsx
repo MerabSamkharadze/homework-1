@@ -48,11 +48,9 @@ export default function Header() {
               About
             </Link>
           </li>
-          <li>
-            <button className="Link" onClick={handleLogout}>
-              log out
+            <button onClick={handleLogout}>
+              Log Out
             </button>
-          </li>
         </ul>
       </nav>
     </header>
