@@ -1,7 +1,21 @@
+"use client";
+
 import "./Header.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
+
+  const handleLogout = () => {
+    document.cookie =
+      "accessToken=; expires=Thu, 01 Dec 2004 19:25:33 UTC; path=/;";
+    document.cookie =
+      "refreshToken=; expires=Thu, 01 DEC 2004 19:25:33 UTC; path=/;";
+
+    router.push("/auth/login");
+  };
+
   return (
     <header className="Header">
       <Link className="Header-logo Link" href="/">
@@ -34,12 +48,11 @@ export default function Header() {
               About
             </Link>
           </li>
-
-          {/* <li>
-            <Link className="Link" href="/assignment-3">
-              assignment-3
-            </Link>
-          </li> */}
+          <li>
+            <button className="Link" onClick={handleLogout}>
+              log out
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
