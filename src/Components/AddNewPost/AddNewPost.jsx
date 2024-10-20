@@ -1,7 +1,7 @@
 "use client";
 import "./AddNewPost.css";
 import AddSvg from "@/public/svg/AddSvg";
-import Return from "@/public/svg/Return";
+import Return from "@/public/svg/ReturnSvg";
 import { useState } from "react";
 
 export default function AddNewPost({ setLocalPosts }) {

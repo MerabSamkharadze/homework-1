@@ -4,25 +4,23 @@ import Link from "next/link";
 import "./BlogPosts.css";
 import AddNewPost from "../AddNewPost/AddNewPost";
 import { useState, useEffect } from "react";
-import Return from "@/public/svg/Return";
+import ReturnSvg from "@/public/svg/ReturnSvg";
 
 export default function BlogPosts({ posts }) {
   const [localPosts, setLocalPosts] = useState([]);
   const [postss, setPostss] = useState([...posts]);
   const [removedPostIdArr, setRemovedPostIdArr] = useState([]);
 
-  // UseEffect to ensure localStorage is accessed only on the client-side
   useEffect(() => {
     const savedPosts = JSON.parse(localStorage.getItem("posts") || "[]");
     setLocalPosts(savedPosts);
 
-    // Get removedPostId array, ensure it's an array
     let removedIds = JSON.parse(localStorage.getItem("removedPostId") || "[]");
     if (!Array.isArray(removedIds)) {
       removedIds = [];
     }
     setRemovedPostIdArr(removedIds);
-  }, []); // Runs only on the client-side after the component is mounted
+  }, []);
 
   return (
     <>
@@ -49,7 +47,7 @@ export default function BlogPosts({ posts }) {
                     }}
                     className="deletePost"
                   >
-                    <Return />
+                    <ReturnSvg />
                   </div>
                   <h2 className="post-title">{post.title}</h2>
                   <p className="post-content">{post.body}</p>
@@ -81,7 +79,7 @@ export default function BlogPosts({ posts }) {
                   }}
                   className="deletePost"
                 >
-                  <Return />
+                  <ReturnSvg />
                 </div>
                 <h2 className="post-title">{post.title}</h2>
                 <p className="post-content">{post.body}</p>
