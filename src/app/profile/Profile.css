@@ -3,8 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("https://thefoodellers.com/wp-content/uploads/2023/11/italy-food-wine-scaled.jpg")
-    no-repeat center center;
+  background: url("https://thefoodellers.com/wp-content/uploads/2023/11/italy-food-wine-scaled.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -13,38 +12,49 @@
   padding: 4rem;
   border-radius: 1rem;
   box-shadow: 0 0.4rem 1, 2rem rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 40rem;
+  text-align: left; 
+  width: 50rem;
   transition: transform 0.3s ease;
-}
 
-.profile-photo {
-  border-radius: 50%;
-  width: 20rem;
-  height: 20rem;
-  object-fit: cover;
-  margin-bottom: 1.5rem;
-  border: 0.4rem solid #fbb438;
-}
-
-.profile-name {
-  font-size: 2.5rem;
-  color: #1a1a1a;
-  margin-bottom: 0.8rem;
-}
-
-.profile-surname {
-  font-size: 1.7rem;
-  color: #353535;
-  margin-bottom: 0.5rem;
-}
-
-.profile-email {
-  font-size: 1.2rem;
-  color: #585757;
-  margin-top: 1rem;
 }
 
 .profile-card:hover {
-  transform: scale(1.08);
+  transform: scale(1.02);
+}
+
+.profile-header {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 20px; 
+}
+
+.profile-name {
+  font-size: 26px;
+  margin-left: 15px; 
+  color: #333;
+}
+
+.profile-image {
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%;
+}
+
+.profile-info p {
+  margin: 8px 0;
+  font-size: 16px !important;
+
+}
+
+strong {
+  color: #333;
+  font-size:20px;
+
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
 }
