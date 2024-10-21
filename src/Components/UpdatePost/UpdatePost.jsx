@@ -1,6 +1,6 @@
 "use client";
 import "./UpdatePost.css";
-import UpdateSvg from "@/public/svg/UpdateSvg";
+import UpdateSvg from "../../../public/svg/UpdateSvg";
 import { useState } from "react";
 
 export default function UpdatePost({ post, setLocalPosts }) {

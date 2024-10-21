@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
         <UnAuthHeader />
         {children}
         <UnAuthFooter />
-        <footer>footer</footer>
       </body>
     </html>
   );

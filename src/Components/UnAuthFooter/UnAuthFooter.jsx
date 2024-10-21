@@ -1,7 +1,5 @@
 import "./UnAuthFooter.css";
 
-import Link from "next/link";
-
 export default function UnAuthFooter() {
   return (
     <footer className="Footer">

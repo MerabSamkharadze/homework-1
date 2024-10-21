@@ -4,7 +4,7 @@ import Link from "next/link";
 import "./BlogPosts.css";
 import AddNewPost from "../AddNewPost/AddNewPost";
 import { useState, useEffect } from "react";
-import ReturnSvg from "@/public/svg/ReturnSvg";
+import ReturnSvg from "../../../public/svg/ReturnSvg";
 import UpdatePost from "../UpdatePost/UpdatePost";
 
 export default function BlogPosts({ posts }) {

@@ -2,7 +2,7 @@
 import "./login.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import GoogleSvg from "@/public/svg/GoogleSvg";
+import GoogleSvg from "../../../../public/svg/GoogleSvg";
 
 export default function Login() {
   const [name, setName] = useState("");
@@ -99,7 +99,10 @@ export default function Login() {
       </div>
 
       <div className="video-container">
-        <video src="/" autoPlay muted loop playsInline className="video" />
+        <video autoPlay muted loop playsInline className="video">
+          <source src="/assets/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   );
