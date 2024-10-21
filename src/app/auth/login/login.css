@@ -1,14 +1,125 @@
-div {
+.login-container {
   display: flex;
-  flex-direction: column;
-  max-width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  font-family: sans-serif;
 }
 
-.login-from {
-  margin-top: 100px;
-  padding: 50px;
+.input-container {
+  border-radius: 1rem;
+  padding: 4rem;
+  max-width: 40rem;
+  width: 100%;
+  margin: 0 auto;
 }
+
+.login-form > h1 {
+  font-size: 3rem;
+  text-align: start;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.input-wrapper {
+  margin-bottom: 2rem;
+}
+
 .label {
-  font-size: 50px;
-  padding-right: 10px;
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  color: #555;
+}
+
+.input-wrapper > input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  transition: box-shadow 0.3s;
+}
+.input-wrapper > input:hover {
+  box-shadow: 0 0 6px #007bff;
+}
+.login {
+  width: 100%;
+  padding: 1rem;
+  background-color: #159205;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login:hover {
+  background-color: #26c411;
+}
+
+.validation-msg {
+  text-align: center;
+  color: red;
+}
+
+.video-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video {
+  height: 100vh;
+  width: auto;
+  object-fit: cover;
+}
+.auth-google-new {
+  background: white;
+  border: 1px solid #c8c5c5;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  --btn-icon-size: 16px;
+  display: inline-flex;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: inherit;
+  font-feature-settings: "ss01";
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  flex-grow: 1;
+  border-radius: 9999px;
+  gap: 10px;
+  padding: 0 24px;
+  height: 54px;
+}
+.stick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 8px;
+}
+.stick > div {
+  height: 1px;
+  width: 86px;
+  background-color: #6e6d7a;
+}
+.stick > h1 {
+  font-size: 12px;
+  color: #6e6d7a;
 }

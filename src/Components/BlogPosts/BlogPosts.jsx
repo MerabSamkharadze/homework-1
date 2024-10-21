@@ -6,6 +6,7 @@ import AddNewPost from "../AddNewPost/AddNewPost";
 import { useState, useEffect } from "react";
 import ReturnSvg from "@/public/svg/ReturnSvg";
 import UpdateSvg from "@/public/svg/UpdateSvg";
+import UpdatePost from "../UpdatePost/UpdatePost";
 
 export default function BlogPosts({ posts }) {
   const [localPosts, setLocalPosts] = useState([]);
@@ -75,31 +76,9 @@ export default function BlogPosts({ posts }) {
 
           {/* Local Posts */}
           {localPosts.map((post) => (
-            <Link key={post.id} href={`/blog/#`} className="Link">
+            <div key={post.id} href={`/blog/#`} className="Link">
               <div className="post">
-                <div
-                  className="updatePost"
-                  onClick={(event) => {
-                    event.preventDefault();
-                    // const updatedPosts = localPosts.filter(
-                    //   (updatedPost) => updatedPost.id !== post.id
-                    // );
-                    // const index = localPosts.findIndex(
-                    //   (p) => p.id === post.id
-                    // );
-                    // index !== -1
-                    //   ? (updatedPosts[index] = {
-                    //       title: "merabi",
-                    //       body: "samkharadze",
-                    //     })
-                    //   : updatedPosts[index];
-
-                    // localStorage.setItem("posts", JSON.stringify(updatedPosts));
-                    // setLocalPosts(updatedPosts);
-                  }}
-                >
-                  <UpdateSvg />
-                </div>
+                <UpdatePost post={post} setLocalPosts={setLocalPosts} />
                 <div
                   onClick={(event) => {
                     event.preventDefault();
@@ -125,7 +104,7 @@ export default function BlogPosts({ posts }) {
                   <div className="views">views: {post.views ?? 0}</div>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

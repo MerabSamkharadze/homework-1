@@ -14,6 +14,7 @@
 
 nav .Header-ul {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 1.5rem;
 }
@@ -33,6 +34,18 @@ nav .Header-ul {
 .Link {
   color: white;
   text-decoration: none;
+}
+.Header-ul > button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 .Header-logo {
   font-size: 2.8rem;
