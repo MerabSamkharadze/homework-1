@@ -1,6 +1,6 @@
 import React from "react";
 import "./Blog.css";
-import BlogPosts from "../../Components/BlogPosts/BlogPosts";
+import BlogPosts from "@/Components/BlogPosts/BlogPosts";
 
 export default function Blog() {
   return (

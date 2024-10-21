@@ -1,5 +1,4 @@
 import "./Page.css";
-import Button from "@/Components/Button/Button";
 export default function Content() {
   return (
     <div className="main-container">
@@ -8,7 +7,6 @@ export default function Content() {
         Here you can discover a wide variety of products.
       </h2>
 
-      <Button content={"Log In / Registration"} backgroundColor={"brown"} />
     </div>
   );
 }

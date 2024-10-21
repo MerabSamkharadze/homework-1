@@ -12,8 +12,9 @@ export default function Header() {
       "accessToken=; expires=Thu, 01 Dec 2004 19:25:33 UTC; path=/;";
     document.cookie =
       "refreshToken=; expires=Thu, 01 DEC 2004 19:25:33 UTC; path=/;";
-
-    router.push("/auth/login");
+      
+    router.push("/login");
+    document.location.reload();
   };
 
   return (
