@@ -1,11 +1,10 @@
 "use client";
 import "./UpdatePost.css";
 import UpdateSvg from "@/public/svg/UpdateSvg";
-import Return from "@/public/svg/ReturnSvg";
 import { useState } from "react";
 
 export default function UpdatePost({ post, setLocalPosts }) {
-  const [blankUpdate, setBlankUpdate] = useState(false); // Changed from blancUpdate to blankUpdate for consistency.
+  const [blankUpdate, setBlankUpdate] = useState(false);
 
   const [title, setTitle] = useState(post.title);
   const [content, setContent] = useState(post.body);
@@ -81,7 +80,7 @@ export default function UpdatePost({ post, setLocalPosts }) {
       <div
         onClick={(e) => {
           e.preventDefault();
-          setBlankUpdate(true);
+          setBlankUpdate(!blankUpdate);
         }}
         className="updatePost"
       >

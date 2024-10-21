@@ -13,7 +13,7 @@ export default function Header() {
     document.cookie =
       "refreshToken=; expires=Thu, 01 DEC 2004 19:25:33 UTC; path=/;";
 
-    router.push("/auth/login");
+    router.push("/login");
   };
 
   return (
@@ -48,9 +48,7 @@ export default function Header() {
               About
             </Link>
           </li>
-            <button onClick={handleLogout}>
-              Log Out
-            </button>
+          <button onClick={handleLogout}>Log Out</button>
         </ul>
       </nav>
     </header>

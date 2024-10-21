@@ -1,0 +1,60 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://thefoodellers.com/wp-content/uploads/2023/11/italy-food-wine-scaled.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.profile-card {
+  background-color: #f3d5b9cf;
+  padding: 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 1, 2rem rgba(0, 0, 0, 0.1);
+  text-align: left; 
+  width: 50rem;
+  transition: transform 0.3s ease;
+
+}
+
+.profile-card:hover {
+  transform: scale(1.02);
+}
+
+.profile-header {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 20px; 
+}
+
+.profile-name {
+  font-size: 26px;
+  margin-left: 15px; 
+  color: #333;
+}
+
+.profile-image {
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%;
+}
+
+.profile-info p {
+  margin: 8px 0;
+  font-size: 16px !important;
+
+}
+
+strong {
+  color: #333;
+  font-size:20px;
+
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}

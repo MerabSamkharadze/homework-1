@@ -36,14 +36,8 @@ export default function BlogPosts({ posts }) {
             .map((post) => (
               <Link key={post.id} href={`/blog/${post.id}`} className="Link">
                 <div className="post">
-                  <div
-                    className="updatePost"
-                    onClick={(event) => {
-                      event.preventDefault();
-                    }}
-                  >
-                    <UpdateSvg />
-                  </div>
+                  <UpdatePost post={post} setLocalPosts={setLocalPosts} />
+
                   <div
                     onClick={(event) => {
                       event.preventDefault();
