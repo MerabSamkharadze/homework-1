@@ -1,0 +1,46 @@
+.Footer {
+  background: linear-gradient(to right, rgb(102, 4, 48), rgb(133, 34, 4));
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.Footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.Footer-nav,
+.Footer-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+.Footer-nav li,
+.Footer-links li {
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Footer-nav li:hover,
+.Footer-links li:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.Link {
+  text-decoration: none;
+  color: white;
+}

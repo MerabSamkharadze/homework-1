@@ -2,6 +2,7 @@
 import "./login.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import GoogleSvg from "@/public/svg/GoogleSvg";
 
 export default function Login() {
   const [name, setName] = useState("");
@@ -18,7 +19,7 @@ export default function Login() {
       return;
     }
 
-    setLoading(true); // Start loading
+    setLoading(true);
     try {
       const res = await fetch("https://dummyjson.com/auth/login", {
         method: "POST",
@@ -59,7 +60,9 @@ export default function Login() {
             data-auth-action="Sign In"
             disabled={loading} // Disable when loading
           >
-            {/* Google Sign-In SVG here */}
+            <div className="google-svg">
+              <GoogleSvg />
+            </div>
             Sign in with Google
           </button>
           <div className="stick">
@@ -96,14 +99,7 @@ export default function Login() {
       </div>
 
       <div className="video-container">
-        <video
-          src="/assets/b8bd4e4273cceae2889d9d259b04f732.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="video"
-        />
+        <video src="/" autoPlay muted loop playsInline className="video" />
       </div>
     </div>
   );
