@@ -95,3 +95,12 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+
+.updatePost {
+  width: 3rem;
+  position: absolute;
+  top: 1rem;
+  right: 6rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
