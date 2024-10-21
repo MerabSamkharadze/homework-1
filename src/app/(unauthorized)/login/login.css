@@ -82,7 +82,8 @@
   object-fit: cover;
 }
 .auth-google-new {
-  background: white;
+  background: #fff;
+
   border: 1px solid #c8c5c5;
   font-size: 16px;
   cursor: pointer;
@@ -106,6 +107,10 @@
   gap: 10px;
   padding: 0 24px;
   height: 54px;
+}
+.google-svg {
+  width: 4rem;
+  height: 4rem;
 }
 .stick {
   display: flex;

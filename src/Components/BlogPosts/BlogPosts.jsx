@@ -5,7 +5,6 @@ import "./BlogPosts.css";
 import AddNewPost from "../AddNewPost/AddNewPost";
 import { useState, useEffect } from "react";
 import ReturnSvg from "@/public/svg/ReturnSvg";
-import UpdateSvg from "@/public/svg/UpdateSvg";
 import UpdatePost from "../UpdatePost/UpdatePost";
 
 export default function BlogPosts({ posts }) {
@@ -17,12 +16,24 @@ export default function BlogPosts({ posts }) {
     const savedPosts = JSON.parse(localStorage.getItem("posts") || "[]");
     setLocalPosts(savedPosts);
 
-    let removedIds = JSON.parse(localStorage.getItem("removedPostId") || "[]");
-    if (!Array.isArray(removedIds)) {
-      removedIds = [];
-    }
-    setRemovedPostIdArr(removedIds);
+    const removedIds = JSON.parse(
+      localStorage.getItem("removedPostId") || "[]"
+    );
+    setRemovedPostIdArr(Array.isArray(removedIds) ? removedIds : []);
   }, []);
+
+  const handleDeletePost = (postId, isLocal) => {
+    if (isLocal) {
+      const updatedLocalPosts = localPosts.filter((post) => post.id !== postId);
+      localStorage.setItem("posts", JSON.stringify(updatedLocalPosts));
+      setLocalPosts(updatedLocalPosts);
+    } else {
+      const updatedRemovedIds = [...removedPostIdArr, postId];
+      setRemovedPostIdArr(updatedRemovedIds);
+      localStorage.setItem("removedPostId", JSON.stringify(updatedRemovedIds));
+      setPostss(postss.filter((post) => post.id !== postId));
+    }
+  };
 
   return (
     <>
@@ -32,56 +43,38 @@ export default function BlogPosts({ posts }) {
         <div className="posts-container">
           {/* Fetched Posts */}
           {postss
-            .filter((pts) => !removedPostIdArr.includes(pts.id))
+            .filter((post) => !removedPostIdArr.includes(post.id))
             .map((post) => (
-              <Link key={post.id} href={`/blog/${post.id}`} className="Link">
-                <div className="post">
-                  <UpdatePost post={post} setLocalPosts={setLocalPosts} />
-
-                  <div
-                    onClick={(event) => {
-                      event.preventDefault();
-                      const updatedRemovedIds = [...removedPostIdArr, post.id];
-                      setRemovedPostIdArr(updatedRemovedIds);
-                      localStorage.setItem(
-                        "removedPostId",
-                        JSON.stringify(updatedRemovedIds)
-                      );
-                      setPostss(postss.filter((pos) => pos.id !== post.id));
-                    }}
-                    className="deletePost"
-                  >
-                    <ReturnSvg />
-                  </div>
-                  <h2 className="post-title">{post.title}</h2>
-                  <p className="post-content">{post.body}</p>
-                  <div className="reactions-container">
-                    <div className="like-dislike">
-                      <div className="like">👍 {post.reactions.likes}</div>
-                      <div className="dislike">
-                        👎 {post.reactions.dislikes}
-                      </div>
-                    </div>
-                    <div className="views">views: {post.views}</div>
-                  </div>
+              <div key={post.id} className="post">
+                <UpdatePost post={post} setLocalPosts={setLocalPosts} />
+                <div
+                  onClick={() => handleDeletePost(post.id, false)}
+                  className="deletePost"
+                >
+                  <ReturnSvg />
                 </div>
-              </Link>
+                <h2 className="post-title">{post.title}</h2>
+                <p className="post-content">{post.body}</p>
+                <div className="reactions-container">
+                  <div className="like-dislike">
+                    <div className="like">👍 {post.reactions.likes}</div>
+                    <div className="dislike">👎 {post.reactions.dislikes}</div>
+                  </div>
+                  <div className="views">views: {post.views}</div>
+                </div>
+                <Link href={`/blog/${post.id}`} className="see-more">
+                  see more...
+                </Link>
+              </div>
             ))}
 
           {/* Local Posts */}
           {localPosts.map((post) => (
-            <div key={post.id} href={`/blog/#`} className="Link">
+            <div key={post.id} className="Link">
               <div className="post">
                 <UpdatePost post={post} setLocalPosts={setLocalPosts} />
                 <div
-                  onClick={(event) => {
-                    event.preventDefault();
-                    const updatedPosts = localPosts.filter(
-                      (updatedPost) => updatedPost.id !== post.id
-                    );
-                    localStorage.setItem("posts", JSON.stringify(updatedPosts));
-                    setLocalPosts(updatedPosts);
-                  }}
+                  onClick={() => handleDeletePost(post.id, true)}
                   className="deletePost"
                 >
                   <ReturnSvg />
@@ -96,6 +89,9 @@ export default function BlogPosts({ posts }) {
                     </div>
                   </div>
                   <div className="views">views: {post.views ?? 0}</div>
+                </div>
+                <div href={`/blog/${post.id}`} className="see-more">
+                  see more...
                 </div>
               </div>
             </div>
