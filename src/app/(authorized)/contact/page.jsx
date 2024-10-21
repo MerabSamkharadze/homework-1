@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Components/Button/Button";
+import Button from "@/Components/Button/Button";
 import "./Contact.css";
 
 export default function Contact() {
@@ -7,7 +7,7 @@ export default function Contact() {
     <div className="contact-container">
       <h1>დაგვიკავშირდით</h1>
 
-      <form>
+      <form className="contact-form">
         <div>
           <label htmlFor="name">სახელი:</label>
           <input

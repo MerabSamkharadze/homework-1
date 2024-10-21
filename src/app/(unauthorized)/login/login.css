@@ -8,28 +8,28 @@
 }
 
 .input-container {
-  border-radius: 10px;
-  padding: 40px;
-  max-width: 400px;
+  border-radius: 1rem;
+  padding: 4rem;
+  max-width: 40rem;
   width: 100%;
   margin: 0 auto;
 }
 
 .login-form > h1 {
-  font-size: 30px;
+  font-size: 3rem;
   text-align: start;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   color: #333;
 }
 
 .input-wrapper {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .label {
   display: block;
-  margin-bottom: 8px;
-  font-size: 16px;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
   color: #555;
 }
 
@@ -38,7 +38,7 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1.6rem;
   outline: none;
   transition: 0.3s ease-in-out;
   transition: box-shadow 0.3s;
@@ -48,21 +48,21 @@
 }
 .login {
   width: 100%;
-  padding: 10px;
-  background-color: #007bff;
+  padding: 1rem;
+  background-color: #159205;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .login:hover {
-  background-color: #0056b3;
+  background-color: #26c411;
 }
 
-p {
+.validation-msg {
   text-align: center;
   color: red;
 }

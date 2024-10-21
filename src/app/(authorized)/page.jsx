@@ -8,7 +8,7 @@ export default function Content() {
         Here you can discover a wide variety of products.
       </h2>
 
-      <Button content={"Log In / Registration"} backgroundColor={"brown"} />
+      {/* <Button content={"Log In / Registration"} backgroundColor={"brown"} /> */}
     </div>
   );
 }
