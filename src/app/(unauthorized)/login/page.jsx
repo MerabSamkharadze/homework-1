@@ -3,6 +3,7 @@ import "./login.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import GoogleSvg from "../../../../public/svg/GoogleSvg";
+import { authenticate } from "@/lib/action";
 
 export default function Login() {
   const [name, setName] = useState("");
