@@ -9,6 +9,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -18,33 +19,23 @@ export default function Login() {
       setMessage("Please enter both username and password.");
       return;
     }
+    const formData = { username: name, password: password };
 
     setLoading(true);
+
     try {
-      const res = await fetch("https://dummyjson.com/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          username: name,
-          password: password,
-          expiresInMins: 30,
-        }),
-      });
+      const result = await authenticate(formData);
 
-      const data = await res.json();
-
-      if (res.ok) {
-        document.cookie = `accessToken=${data.accessToken}; path=/`;
-        document.cookie = `refreshToken=${data.refreshToken}; path=/`;
+      if (result.success) {
         router.push("/");
       } else {
-        setMessage(data.message || "Invalid login credentials");
+        setMessage("Login failed. Please try again.");
       }
     } catch (err) {
       console.error("Login failed", err);
       setMessage("Something went wrong. Please try again later.");
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false);
     }
   };
 
@@ -58,7 +49,7 @@ export default function Login() {
             type="submit"
             className="auth-google-new"
             data-auth-action="Sign In"
-            disabled={loading} // Disable when loading
+            disabled={loading}
           >
             <div className="google-svg">
               <GoogleSvg />
@@ -67,7 +58,7 @@ export default function Login() {
           </button>
           <div className="stick">
             <div></div>
-            <h1>or sign in with username</h1>
+            <h2>or sign in with username</h2>
             <div></div>
           </div>
           <div className="input-wrapper">
