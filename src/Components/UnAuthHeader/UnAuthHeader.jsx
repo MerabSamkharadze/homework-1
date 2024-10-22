@@ -1,6 +1,6 @@
 "use client";
 
-import "./unAuthHeader.css";
+import "./UnAuthHeader.css";
 import Link from "next/link";
 
 export default function UnAuthHeader() {
