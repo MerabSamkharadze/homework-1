@@ -1,90 +1,52 @@
-"use client";
-import { useEffect, useState } from "react";
-import "./Profile.css";
+import { cookies } from 'next/headers';
+import { refreshAccessToken } from '../../../lib/action';
+import "./profile.css"; 
 
-export default function Profile() {
-  const [userData, setUserData] = useState(null);
-  const [error, setError] = useState(null);
+export default async function Profile() {
+  const cookieStore = cookies();
+  let token = cookieStore.get('accessToken'); 
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const res = await fetch("https://dummyjson.com/auth/me", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${getCookie("accessToken")}`,
-          },
-        });
-
-        if (!res.ok) {
-          throw new Error("Failed to fetch user data");
-        }
-
-        const data = await res.json();
-        setUserData(data);
-      } catch (err) {
-        console.error("Error fetching user data:", err);
-        setError("Failed to load profile. Please log in again.");
-      }
-    };
-
-    fetchUserData();
-  }, []);
-
-  const getCookie = (name) => {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) {
-      return parts.pop().split(";").shift();
+  if (!token) {
+    const refreshResponse = await refreshAccessToken();
+    if (!refreshResponse.success) {
+      return <h1>Please log in</h1>;
     }
-    return undefined;
-  };
+    token = cookieStore.get('accessToken'); 
+  }
+
+  const response = await fetch('https://dummyjson.com/auth/me', {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token.value}`, 
+    },
+    credentials: 'include',
+  });
+
+  const data = await response.json();
+
+
+  if (!response.ok) {
+    return <h1>Failed to load profile</h1>;
+  }
 
   return (
     <div className="profile-container">
-      {error && <p className="error">{error}</p>}
-      {userData ? (
+      {data ? (
         <div className="profile-card">
           <div className="profile-header">
-            <img
-              src={userData.image}
-              alt={`${userData.firstName} ${userData.lastName}`}
-              className="profile-image"
-            />
-            <h1 className="profile-name">{userData.username}</h1>
+            <img src={data.image} alt={`${data.username} ${data.lastName}`} className="profile-image" />
+            <h1 className="profile-name">{data.username}</h1>
           </div>
           <div className="profile-info">
-            <p>
-              <strong>Email:</strong> {userData.email}
-            </p>
-            <p>
-              <strong>Phone:</strong> {userData.phone}
-            </p>
-            <p>
-              <strong>Age:</strong> {userData.age}
-            </p>
-            <p>
-              <strong>Height:</strong> {userData.height} cm
-            </p>
-            <p>
-              <strong>Weight:</strong> {userData.weight} kg
-            </p>
-            <p>
-              <strong>Blood Group:</strong> {userData.bloodGroup}
-            </p>
-            <p>
-              <strong>Eye Color:</strong> {userData.eyeColor}
-            </p>
-            <p>
-              <strong>Hair:</strong> {userData.hair.color} ({userData.hair.type}
-              )
-            </p>
-            <p>
-              <strong>Address:</strong> {userData.address.address},{" "}
-              {userData.address.city}, {userData.address.state},{" "}
-              {userData.address.postalCode}, {userData.address.country}
-            </p>
+            <p><strong>Email:</strong> {data.email}</p>
+            <p><strong>Phone:</strong> {data.phone}</p>
+            <p><strong>Age:</strong> {data.age}</p>
+            <p><strong>Height:</strong> {data.height} cm</p>
+            <p><strong>Weight:</strong> {data.weight} kg</p>
+            <p><strong>Blood Group:</strong> {data.bloodGroup}</p>
+            <p><strong>Eye Color:</strong> {data.eyeColor}</p>
+            <p><strong>Hair:</strong> {data.hair.color} ({data.hair.type})</p>
+            <p><strong>Address:</strong> {data.address.address}, {data.address.city}, {data.address.state}, {data.address.postalCode}, {data.address.country}</p>
           </div>
         </div>
       ) : (
@@ -93,3 +55,4 @@ export default function Profile() {
     </div>
   );
 }
+
