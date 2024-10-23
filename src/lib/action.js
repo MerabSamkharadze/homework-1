@@ -105,3 +105,13 @@ export async function logout() {
     return { success: false, message: "Something went wrong during logout." };
   }
 }
+export async function getCookie() {
+  try {
+    const cookieStore = cookies();
+    const result = cookieStore.get("accessToken");
+
+    return result;
+  } catch (e) {
+    return { success: false, message: "Something went wrong during logout." };
+  }
+}

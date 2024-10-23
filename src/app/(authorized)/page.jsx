@@ -1,6 +1,10 @@
+"use client";
+
+import useAuth from "../hooks/useAuth";
 import "./Page.css";
 import Button from "@/Components/Button/Button";
 export default function Content() {
+  useAuth("/");
   return (
     <div className="main-container">
       <h1 className="hello-text">welcome to Geo Market</h1>

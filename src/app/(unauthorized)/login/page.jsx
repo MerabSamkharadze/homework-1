@@ -4,8 +4,10 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import GoogleSvg from "../../../../public/svg/GoogleSvg";
 import { authenticate } from "@/lib/action";
+import useAuth from "@/app/hooks/useAuth";
 
 export default function Login() {
+  useAuth("/login");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
