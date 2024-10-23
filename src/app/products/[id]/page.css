@@ -1,0 +1,116 @@
+.product-container {
+  max-width: 90rem;
+  margin: 7rem auto;
+  background-color: #f19069dd;
+  padding: 3rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.product-titlee {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #141413;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.product-images-slider {
+  width: 100%;
+  max-width: 600px; /* Adjust the max-width according to your design */
+  margin: 0 auto;
+}
+.product-images {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.product-imagee {
+  max-width: 30rem;
+  border-radius: 0.8rem;
+}
+
+.product-info {
+  margin-bottom: 3rem;
+}
+
+.product-description h3 {
+  font-size: 2.5rem;
+  color: #040b2b;
+  margin-bottom: 1rem;
+}
+
+.product-description p {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.product-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.product-meta div {
+  background-color: #f1f1f1;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+
+.product-meta strong {
+  color: #0b042a;
+  display: block;
+  font-size: 2.9rem;
+  margin-bottom: 0.5rem;
+}
+.product-details {
+  font-size: 2rem;
+  color: rgb(23, 118, 4);
+}
+
+.product-warranty,
+.product-shipping {
+  background-color: #f1f1f1;
+  padding: 2.8rem;
+  border-radius: 0.8rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.product-reviews h3 {
+  font-size: 2.3rem;
+  color: #10072c;
+  margin-bottom: 2rem;
+}
+
+.product-reviews ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.product-reviews li {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+.product-reviews li p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .post-container {
+    padding: 2rem;
+  }
+
+  .product-meta {
+    grid-template-columns: 1fr;
+  }
+}

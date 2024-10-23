@@ -1,0 +1,26 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+}
+.about-us {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(250, 235, 215, 0.843);
+  padding: 5rem;
+}
+.about-us h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.about-us p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: black;
+}

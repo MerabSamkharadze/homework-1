@@ -4,6 +4,7 @@ import "./ProductList.css";
 import Product from "../Product/Product";
 import { useRouter } from "next/navigation";
 import SearchBar from "../SearchBar/SearchBar";
+import AddProduct from "../Product/addproduct";
 
 export default function ProductList({ products, onSearch }) {
   const router = useRouter();
@@ -26,6 +27,8 @@ export default function ProductList({ products, onSearch }) {
         </div>
         <SearchBar onSearch={onSearch} />
       </div>
+
+      <AddProduct/>
 
       <div className="product-grid">
         {products.map((product) => (

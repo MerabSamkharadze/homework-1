@@ -20,7 +20,6 @@
 .posts-container {
   font-size: 2rem;
   flex-grow: 1;
-  min-height: 100vh;
 }
 
 .post {
@@ -30,12 +29,6 @@
   background-color: #fcebc7b9;
   margin-top: 1rem;
   transition: all 0.2s;
-  position: relative;
-}
-
-.post:hover {
-  background-color: #fcebc79c;
-  transform: scale(1.01);
 }
 
 .reactions-container {
@@ -70,6 +63,11 @@
   font-size: 1.3rem;
 }
 
+.post:hover {
+  background-color: #fcebc79c;
+  transform: scale(1.01);
+}
+
 .post-title {
   margin-bottom: 1rem;
   font-size: 2.4rem;
@@ -85,27 +83,4 @@
 .Link {
   text-decoration: none;
   color: inherit;
-}
-.see-more {
-  text-decoration: none;
-  font-size: large;
-  color: brown;
-}
-
-.deletePost {
-  width: 3rem;
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.updatePost {
-  width: 3rem;
-  position: absolute;
-  top: 1rem;
-  right: 6rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
 }
