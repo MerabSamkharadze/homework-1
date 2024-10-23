@@ -1,8 +1,12 @@
+"use client";
+
 import React from "react";
 import Button from "@/Components/Button/Button";
 import "./Contact.css";
+import useAuth from "@/app/hooks/useAuth";
 
 export default function Contact() {
+  useAuth("/contact");
   return (
     <div className="contact-container">
       <h1>დაგვიკავშირდით</h1>

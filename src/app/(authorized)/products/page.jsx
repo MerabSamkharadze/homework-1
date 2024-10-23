@@ -1,7 +1,10 @@
+"use client";
 import ProductList from "@/Components/ProductList/Product";
 import "./page.css";
+import useAuth from "@/app/hooks/useAuth";
 
 async function getProducts(searchTerm = "", sortBy = "title", order = "asc") {
+  useAuth("/products");
   try {
     const res = await fetch(
       `https://dummyjson.com/products/search?q=${searchTerm}&sortBy=${sortBy}&order=${order}`
