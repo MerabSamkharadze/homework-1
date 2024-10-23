@@ -1,6 +1,7 @@
 import "./Global.css";
-import UnAuthHeader from "@/Components/UnAuthHeader/UnAuthHeader";
-import UnAuthFooter from "@/Components/UnAuthFooter/UnAuthFooter";
+import Header from "@/Components/Header/Header";
+import Footer from "@/Components/Footer/Footer";
+import AuthWrapper from "@/Components/AuthWrapper/AuthWrapper";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,9 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <UnAuthHeader />
-        {children}
-        <UnAuthFooter />
+        <AuthWrapper>
+          <Header />
+          {children}
+          <Footer />
+        </AuthWrapper>
       </body>
     </html>
   );

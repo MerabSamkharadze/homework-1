@@ -1,6 +1,3 @@
-"use client";
-
-import useAuth from "@/app/hooks/useAuth";
 import "./Blog.css";
 import BlogPosts from "@/Components/BlogPosts/BlogPosts";
 
@@ -16,7 +13,6 @@ async function fetchPosts() {
 }
 
 export default async function Blog() {
-  useAuth("/blog");
   const postsData = await fetchPosts();
 
   return (
