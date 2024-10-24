@@ -22,7 +22,19 @@ export default function BlogPosts({ posts }) {
     setRemovedPostIdArr(Array.isArray(removedIds) ? removedIds : []);
   }, []);
 
-  const handleDeletePost = (postId, isLocal) => {
+  // const handleDeletePost = (postId, isLocal) => {
+  //   if (isLocal) {
+  //     const updatedLocalPosts = localPosts.filter((post) => post.id !== postId);
+  //     localStorage.setItem("posts", JSON.stringify(updatedLocalPosts));
+  //     setLocalPosts(updatedLocalPosts);
+  //   } else {
+  //     const updatedRemovedIds = [...removedPostIdArr, postId];
+  //     setRemovedPostIdArr(updatedRemovedIds);
+  //     localStorage.setItem("removedPostId", JSON.stringify(updatedRemovedIds));
+  //     setPostss(postss.filter((post) => post.id !== postId));
+  //   }
+  // };
+  const handleDeletePost = async (postId, isLocal) => {
     if (isLocal) {
       const updatedLocalPosts = localPosts.filter((post) => post.id !== postId);
       localStorage.setItem("posts", JSON.stringify(updatedLocalPosts));
@@ -32,6 +44,18 @@ export default function BlogPosts({ posts }) {
       setRemovedPostIdArr(updatedRemovedIds);
       localStorage.setItem("removedPostId", JSON.stringify(updatedRemovedIds));
       setPostss(postss.filter((post) => post.id !== postId));
+
+      try {
+        const response = await fetch(
+          `https://dummyjson.com/products/${postId}`,
+          {
+            method: "DELETE",
+          }
+        );
+        const result = await response.json();
+      } catch (error) {
+        console.error("Error deleting post from server:", error);
+      }
     }
   };
 
