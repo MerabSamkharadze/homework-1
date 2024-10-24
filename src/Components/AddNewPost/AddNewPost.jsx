@@ -2,38 +2,74 @@
 import "./AddNewPost.css";
 import AddSvg from "../../../public/svg/AddSvg";
 import Return from "../../../public/svg/ReturnSvg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function AddNewPost({ setLocalPosts }) {
   const [blanc, setBlanc] = useState(false);
-
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    const storedPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
+    setLocalPosts(storedPosts);
+  }, [setLocalPosts]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError("");
+    setSuccess("");
 
-    try {
-      const post = {
-        id: Date.now(),
-        title: title,
-        body: content,
-        reactions: { likes: "0", dislikes: "0" },
-      };
-      const newPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
-      newPosts.push(post);
-      localStorage.setItem("posts", JSON.stringify(newPosts));
-      setLocalPosts(newPosts);
-      setBlanc(false);
-      setTitle("");
-      setContent("");
-    } catch (error) {
-      console.error("Error creating post:", error);
-    } finally {
-      setLoading(false);
-    }
+    setTimeout(async () => {
+      try {
+        if (title.trim().length < 5 || content.trim().length < 10) {
+          setError(
+            "Title must be at least 5 characters and content 10 characters."
+          );
+          setLoading(false);
+          return;
+        }
+
+        const post = {
+          id: Date.now(),
+          title: title,
+          body: content,
+          reactions: { likes: "0", dislikes: "0" },
+        };
+
+        const newPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
+        newPosts.push(post);
+        localStorage.setItem("posts", JSON.stringify(newPosts));
+        setLocalPosts(newPosts);
+
+        const response = await fetch("https://dummyjson.com/posts/add", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: post.title,
+            body: post.body,
+          }),
+        });
+
+        const result = await response.json();
+        console.log("Post added on server:", result);
+
+        setBlanc(false);
+        setTitle("");
+        setContent("");
+        setSuccess("Post added successfully!");
+      } catch (error) {
+        console.error("Error creating post:", error);
+        setError("There was a problem creating the post.");
+      } finally {
+        setLoading(false);
+      }
+    }, 1000);
   };
 
   return (
@@ -57,6 +93,7 @@ export default function AddNewPost({ setLocalPosts }) {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 required
+                minLength={5}
               />
             </div>
             <div>
@@ -65,11 +102,15 @@ export default function AddNewPost({ setLocalPosts }) {
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
                 required
+                minLength={10}
               />
             </div>
             <button type="submit" disabled={loading}>
               {loading ? "Adding..." : "Add Blog Post"}
             </button>
+
+            {error && <div className="error">{error}</div>}
+            {success && <div className="success">{success}</div>}
           </form>
         </div>
       )}
