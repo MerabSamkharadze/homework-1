@@ -1,8 +1,10 @@
 .Footer {
-  background: linear-gradient(to right, rgb(102, 4, 48), rgb(133, 34, 4));
+  background-color: black;
   color: white;
-  padding: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   text-align: center;
+  
 }
 
 .Footer-content {

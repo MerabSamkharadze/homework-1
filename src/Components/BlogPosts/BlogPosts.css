@@ -2,55 +2,72 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  
+  
+  
 }
 
 .page-title {
   text-align: center;
   padding: 1rem auto;
   margin-bottom: 3rem;
-  color: #0c0c0c;
-  background-color: #e59203;
+  color: white;
+  width: max-content;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 5rem;
   display: inline-block;
   border-radius: 1rem;
   margin-top: 3.5rem;
+  width: max-content;
+  
+
 }
 
 .posts-container {
   font-size: 2rem;
   flex-grow: 1;
   min-height: 100vh;
+  width: 1000px;
+  background-color: rgba(0, 0, 0, 0.29); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding-bottom: 50px;
+  margin-top: 20px;
 }
 
 .post {
-  border: 1px solid #fbb438;
+  width: 900px;
+  margin: 0 auto;
+  border: 1px solid white;
   padding: 2.2rem;
   border-radius: 0.8rem;
-  background-color: #fcebc7b9;
-  margin-top: 1rem;
+  margin-top: 3rem;
   transition: all 0.2s;
   position: relative;
+  height: auto;
+  cursor: pointer;
 }
 
 .post:hover {
-  background-color: #fcebc79c;
   transform: scale(1.01);
 }
 
 .reactions-container {
   margin-top: 2rem;
-  background-color: #e5920335;
   border-radius: 2rem;
   height: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
+  margin-bottom: 20px;
 }
 
 .like-dislike {
-  color: rgb(12, 97, 9);
+  color: white;
   width: 10rem;
   display: flex;
   align-items: center;
@@ -74,22 +91,26 @@
   margin-bottom: 1rem;
   font-size: 2.4rem;
   font-weight: bold;
-  color: rgb(16, 10, 73);
+  padding-top: 20px;
+  color: white;
 }
 
 .post-content {
-  color: rgb(16, 3, 83);
+  color: gray;
   font-size: 1.5rem;
 }
 
 .Link {
   text-decoration: none;
   color: inherit;
+  
 }
 .see-more {
+  padding-top: 20px;
   text-decoration: none;
   font-size: large;
-  color: brown;
+  color: rgb(176, 172, 172);
+  
 }
 
 .deletePost {

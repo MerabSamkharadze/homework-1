@@ -1,60 +1,126 @@
-.profile-container {
+.profile-section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("https://thefoodellers.com/wp-content/uploads/2023/11/italy-food-wine-scaled.jpg") no-repeat center center;
+  background: url("../../../../public/assets/kadi.jpg")
+  no-repeat center center;
+background-size: cover;
+  background-color: black;
   background-size: cover;
-}
-
-.profile-card {
-  background-color: #f3d5b9cf;
-  padding: 4rem;
-  border-radius: 1rem;
-  box-shadow: 0 0.4rem 1, 2rem rgba(0, 0, 0, 0.1);
-  text-align: left; 
-  width: 50rem;
-  transition: transform 0.3s ease;
-
-}
-
-.profile-card:hover {
-  transform: scale(1.02);
-}
-
-.profile-header {
-  display: flex; 
-  align-items: center; 
-  margin-bottom: 20px; 
-}
-
-.profile-name {
-  font-size: 26px;
-  margin-left: 15px; 
-  color: #333;
-}
-
-.profile-image {
-  width: 80px; 
-  height: 80px; 
-  border-radius: 50%;
-}
-
-.profile-info p {
-  margin: 8px 0;
-  font-size: 16px !important;
-
-}
-
-strong {
-  color: #333;
-  font-size:20px;
-
-}
-
-.error {
-  color: red;
-  font-weight: bold;
-  margin-bottom: 20px;
+  color: white;
   text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.profile-container {
+  background-color: rgba(0, 0, 0, 0.29); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 900px;
+  margin: auto;
+  height: auto;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid white;
+}
+
+.profile-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.profile-intro {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-about {
+  flex: 1;
+  margin-right: 20px;
+}
+.profile-about > h4 {
+  font-size: 30px;
+  text-align: start;
+}
+.profile-about > p {
+  text-align: start;
+  padding-top: 10px;
+  font-size: 16px;
+}
+.profile-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover
+}
+
+.profile-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-url {
+  margin: 0 5px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+.profile-details > h4 {
+  font-size: 25px;
+  text-align: start;
+}
+.profile-details > div {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.profile-details > div > span {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 20px;
+  color: gray;
+}
+.profile-details > div > span > p{
+  padding-top: 5px;
+  display: flex;
+  color: white;
+  font-size: 16px;
 }

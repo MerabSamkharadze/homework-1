@@ -1,8 +1,5 @@
 .contact-container {
-  background: url("https://thefoodellers.com/wp-content/uploads/2023/11/italy-food-wine-1024x585.jpg")
-    no-repeat center center;
-  background-size: cover;
-
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
