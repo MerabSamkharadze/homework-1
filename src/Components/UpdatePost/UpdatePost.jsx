@@ -35,7 +35,7 @@ export default function UpdatePost({ post, setLocalPosts }) {
         console.error("Post not found, unable to update.");
       }
 
-      const response = await fetch(`https://dummyjson.com/products/${id}`, {
+      const response = await fetch(`https://dummyjson.com/posts/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

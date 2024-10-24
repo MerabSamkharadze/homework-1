@@ -7,9 +7,10 @@
 }
 .Link {
   color: inherit;
+  position: relative;
 }
 
-/* სორტირება */
+
 .container {
   min-height: 100vh;
   margin-top: 4rem;
@@ -28,8 +29,35 @@
   border-radius: 1rem;
   appearance: none;
 }
+.delete-button {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.edit-button {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background-color: transparent;
+  top: 1rem;
+  right: 5rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.edit-button:hover {
+  transform: scale(1.1);
+}
 
-/* რესპონსიულობა */
+.delete-button:hover {
+  transform: scale(1.1);
+}
+
 
 @media (max-width: 1000px) {
   .product-grid {
