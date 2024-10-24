@@ -23,19 +23,11 @@ export default function Header() {
 
   return (
     <header className="Header">
-      <Link className="Header-logo Link" href="/">
-        Geo Market
-      </Link>
       <nav>
         <ul className="Header-ul">
           <li>
-            <Link className="Link" href="/profile">
-              Profile
-            </Link>
-          </li>
-          <li>
-            <Link className="Link" href="/blog">
-              Blog
+            <Link className="Link" href="/about">
+              About
             </Link>
           </li>
           <li>
@@ -49,13 +41,25 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link className="Link" href="/about">
-              About
+            <Link className="Link" href="/blog">
+              Blog
             </Link>
           </li>
-          <button onClick={handleLogout}>Log Out</button>
+
+          <li>
+            <Link className="Link" href="/profile">
+              Profile
+            </Link>
+          </li>
         </ul>
+        <Link className="Header-logo Link" href="/">
+          Geo Market
+        </Link>
       </nav>
+
+      <button className="header-button" onClick={handleLogout}>
+        Log Out
+      </button>
     </header>
   );
 }
