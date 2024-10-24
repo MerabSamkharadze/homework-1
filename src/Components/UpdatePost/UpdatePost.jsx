@@ -10,7 +10,7 @@ export default function UpdatePost({ post, setLocalPosts }) {
   const [content, setContent] = useState(post.body);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
@@ -22,8 +22,8 @@ export default function UpdatePost({ post, setLocalPosts }) {
         body: content,
         reactions: post.reactions,
       };
-      const newPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
 
+      const newPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
       const index = newPosts.findIndex((item) => item.id === id);
 
       if (index !== -1) {
@@ -34,6 +34,20 @@ export default function UpdatePost({ post, setLocalPosts }) {
       } else {
         console.error("Post not found, unable to update.");
       }
+
+      const response = await fetch(`https://dummyjson.com/products/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: title,
+          body: content,
+        }),
+      });
+
+      const result = await response.json();
+      console.log("Updated post on server:", result);
     } catch (error) {
       console.error("Error updating post:", error);
     } finally {
