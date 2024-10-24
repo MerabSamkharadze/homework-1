@@ -34,12 +34,9 @@ export default function BlogPosts({ posts }) {
       setPostss(postss.filter((post) => post.id !== postId));
 
       try {
-        const response = await fetch(
-          `https://dummyjson.com/products/${postId}`,
-          {
-            method: "DELETE",
-          }
-        );
+        const response = await fetch(`https://dummyjson.com/posts/${postId}`, {
+          method: "DELETE",
+        });
         const result = await response.json();
       } catch (error) {
         console.error("Error deleting post from server:", error);
