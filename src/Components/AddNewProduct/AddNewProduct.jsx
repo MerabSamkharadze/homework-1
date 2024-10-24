@@ -46,7 +46,7 @@ export default function AddNewProduct({ onAddProduct }) {
       </button>
 
       {isVisible && (
-        <div className="form-container">
+        <div className="form-container33">
           <h2>Add New Product</h2>
           <input
             type="text"

@@ -9,15 +9,23 @@
 }
 
 .search-controls input {
+  background-color: transparent;
   padding: 1rem;
-  border-radius: 0.5rem;
   border: 2px solid #ccc;
   font-size: 1.3rem;
   width: 40rem;
   transition: border-color 0.3s ease;
+  height: 40px;
+  border: 0;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 20px;
 }
-
+.search-controls input::placeholder {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
 .search-controls input:focus {
-  border-color: #4caf50;
   outline: none;
 }

@@ -1,10 +1,13 @@
-.main-container {
-  background-color: black;
-  background-repeat: repeat;
-  background-size: 100px 100px;
+.main-container080 {
   display: flex;
-  min-height: 100vh;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  background: url("../../../../public/assets/1280417267661803541.webp") repeat center ;
+background-size: cover;
+  background-color: black;
+  background-size: contain;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }

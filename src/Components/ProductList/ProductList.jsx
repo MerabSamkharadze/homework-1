@@ -79,7 +79,7 @@ export default function ProductList({ products, onSearch }) {
   };
 
   return (
-    <div className="container">
+    <div className="container080">
       <div className="sort-container">
         <AddNewProduct onAddProduct={handleAddProduct} />
         <div className="sort-controls">
@@ -96,7 +96,7 @@ export default function ProductList({ products, onSearch }) {
       <div className="product-grid">
         {products.map((product) => (
           <div
-            className="Link"
+            className="productLink"
             onClick={() => router.push(`/products/${product.id}`)}
             key={product.id}
           >
@@ -137,7 +137,7 @@ export default function ProductList({ products, onSearch }) {
         {localProducts.length > 0 &&
           localProducts.map((product) => (
             <div
-              className="Link"
+              className="productLink"
               onClick={() => router.push(`/products/${product.id}`)}
               key={product.id}
             >

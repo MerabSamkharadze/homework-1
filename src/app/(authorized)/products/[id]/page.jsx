@@ -29,6 +29,7 @@ export default async function Page({ params }) {
 
   return (
     <div className="product-container">
+      <div className="single-product">
       <div className="product-images">
         <Image
           src={products.images[0]}
@@ -84,6 +85,8 @@ export default async function Page({ params }) {
           ))}
         </ul>
       </div>
+      </div>
+      
     </div>
   );
 }

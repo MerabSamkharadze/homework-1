@@ -22,7 +22,7 @@ export default async function Content({ searchParams }) {
   const products = await getProducts(searchTerm, sortBy, order);
 
   return (
-    <div className="main-container">
+    <div className="main-container080">
       <ProductList products={products} />
     </div>
   );

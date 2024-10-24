@@ -1,6 +1,4 @@
-import Image from "next/image";
 import "./Page.css";
-import Button from "@/Components/Button/Button";
 
 export default function Content() {
   return (
@@ -19,15 +17,15 @@ export default function Content() {
         </div>
       </section>
       <section>
-        <div class="container33">
-          <div class="center-content">
-            <div class="limit">
-              <div class="title">Arts Center, San Francisco</div>
-              <p class="medium-text">
+        <div className="container33">
+          <div className="center-content">
+            <div className="limit">
+              <div className="title">Arts Center, San Francisco</div>
+              <p className="medium-text">
                 Join us at Digital Makers, where digital creators unite to
                 innovate, collaborate, and inspire new possibilities.
               </p>
-              <a href="#Sign-up" class="blue-button">
+              <a href="#Sign-up" className="blue-button">
                 Book your spot now
               </a>
             </div>
