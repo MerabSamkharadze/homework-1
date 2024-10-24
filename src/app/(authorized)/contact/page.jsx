@@ -1,44 +1,64 @@
-import React from "react";
-import Button from "@/Components/Button/Button";
+import React from 'react';
 import "./Contact.css";
 
 export default function Contact() {
   return (
-    <div className="contact-container">
-      <h1>დაგვიკავშირდით</h1>
+    <section className="contact-section">
+    <div className="container34">
+        <div className="contactInfo">
+            <div>
+                <h2>Contact Info</h2>
+                <ul className="info">
+                    <li>
+                        <span style={{ display: "flex", alignItems: "center"}}><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker"/></span>
+                        <span>
+                            Melbourne, Victoria<br />
+                            3000
+                        </span>
+                    </li>
+                    <li>
+                        <span style={{ display: "flex", alignItems: "center"}}><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/mail.png" alt="mail"/></span>
+                        <span>desmondjeon@gmail.com</span>
+                    </li>
+                    <li>
+                        <span style={{ display: "flex", alignItems: "center"}}><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/phone.png" alt="phone"/></span>
+                        <span>0481-111-111</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-      <form className="contact-form">
-        <div>
-          <label htmlFor="name">სახელი:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="შეიყვანეთ თქვენი სახელი"
-            required
-          />
+        <div className="contactForm">
+            <h2>Send a Message</h2>
+            <form className="formBox">
+                <div className="inputBox w50">
+                    <span>First Name</span>
+                    <input type="text" name="firstName" id="firstName" required placeholder="First Name" />
+                </div>
+                <div className="inputBox w50">
+                    <span>Last Name</span>
+                    <input type="text" name="lastName" id="lastName" required placeholder="Last Name" />
+                </div>
+                <div className="inputBox w50">
+                    <span>Email</span>
+                    <input type="email" name="email" id="email" required  placeholder="Email" />
+                </div>
+                <div className="inputBox w50">
+                    <span>Mobile Number</span>
+                    <input type="text" name="mobileNumber" id="mobileNumber" required placeholder="Mobile Number" />
+                </div>
+                <div className="inputBox w100">
+                    <span>Write Your Message Here.</span>
+                    <textarea name="message" id="message" required placeholder="Write Your Message Here" ></textarea>
+                </div>
+                <div className="inputBox w100">
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
         </div>
-        <div>
-          <label htmlFor="email">ელ. ფოსტა:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="შეიყვანეთ თქვენი email"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="message">მესიჯი:</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="ტექსტი"
-            required
-          ></textarea>
-        </div>
-        <Button content={"გაგზავნა"} />
-      </form>
     </div>
+</section>
+
   );
 }
+

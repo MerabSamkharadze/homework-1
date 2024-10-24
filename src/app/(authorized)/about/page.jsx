@@ -4,25 +4,19 @@ export default function about() {
   return (
     <div className="about-container">
       <div className="about-us">
-        <h1>ჩვენ შესახებ</h1>
+        <h1>
+          Free template for creating websites with Astro 4.0 + Tailwind CSS
+        </h1>
         <p>
-          🔘 ჩვენი საიტის მთავარი მიზანია, გავამარტივოთ შოპინგის პროცესი და
-          შევქმნათ საუკეთესო გამოცდილება მომხმარებლებისთვის. ნებისმიერი ტიპის
-          პროდუქტის პოვნა მარტივად არის შესაძლებელი, ხოლო საიტის ინტუიციური
-          დიზაინი ხელს უწყობს მარტივ და სწრაფ ნავიგაციას.
+          AstroWind is a free, customizable and production-ready template for
+          Astro 4.0 + Tailwind CSS. Suitable for Startups, Small Business, SaaS
+          websites, Professional Portfolios, Marketing websites, Landing Pages &
+          Blogs.
         </p>
-        <p>
-          🔘 გარდა პროდუქციის შეძენისა, ჩვენი ბლოგი საშუალებას გაძლევთ გაეცნოთ
-          უახლეს ტენდენციებს და მიიღოთ პრაქტიკული რჩევები. მომხმარებლები ხშირად
-          პოულობენ აქ მათთვის სასარგებლო ინფორმაციას, რაც ხელს უწყობს უკეთესი
-          არჩევანის გაკეთებას.
-        </p>
-        <p>
-          🔘 საიტის ფუნქციონალი და სანდოობა ჩვენი პრიორიტეტია. ჩვენ
-          უზრუნველვყოფთ უსაფრთხო შოპინგის გარემოს, ხოლო გუნდი მუდმივად მუშაობს
-          საიტის გაუმჯობესებაზე, რომ თქვენი შოპინგის გამოცდილება იყოს კომფორტული
-          და ეფექტური.
-        </p>
+        <div className="about-buttons">
+          <div>Get template</div>
+          <div>Learn more</div>
+        </div>
       </div>
     </div>
   );
