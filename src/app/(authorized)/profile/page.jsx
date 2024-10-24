@@ -1,11 +1,8 @@
-"use client";
-
 import { cookies } from "next/headers";
 import { refreshAccessToken } from "../../../lib/action";
 import "./profile.css";
 
 export default async function Profile() {
-  useAuth("/profile");
   const cookieStore = cookies();
   let token = cookieStore.get("accessToken");
 

@@ -14,7 +14,7 @@ export default function useAuth(pathname) {
 
         if (token && pathname === "/login") {
           await router.push("/");
-        } else if (!token) {
+        } else if (!token && pathname !== "/login") {
           await router.push("/login");
         }
       } catch (error) {

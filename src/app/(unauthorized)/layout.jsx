@@ -1,4 +1,6 @@
 import "./Global.css";
+
+import AuthWrapper from "@/Components/AuthWrapper/AuthWrapper";
 import UnAuthHeader from "@/Components/UnAuthHeader/UnAuthHeader";
 import UnAuthFooter from "@/Components/UnAuthFooter/UnAuthFooter";
 
@@ -11,9 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <UnAuthHeader />
-        {children}
-        <UnAuthFooter />
+        <AuthWrapper>
+          <UnAuthHeader />
+          {children}
+          <UnAuthFooter />
+        </AuthWrapper>
       </body>
     </html>
   );
