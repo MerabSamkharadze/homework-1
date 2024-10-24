@@ -32,7 +32,9 @@ export default function Login() {
       } else {
         setMessage("Login failed. Please try again.");
       }
+      
     } catch (err) {
+      
       console.error("Login failed", err);
       setMessage("Something went wrong. Please try again later.");
     } finally {

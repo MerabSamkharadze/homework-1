@@ -20,6 +20,7 @@ export default async function Page({ params }) {
 
   return (
     <div className="post-container">
+      <div className="kadi-container">
       <h1 className="post-title">{post.title}</h1>
       <p className="post-body">{post.body}</p>
 
@@ -33,6 +34,8 @@ export default async function Page({ params }) {
       </div>
 
       <div className="post-views">Views: {post.views}</div>
+      </div>
+      
     </div>
   );
 }

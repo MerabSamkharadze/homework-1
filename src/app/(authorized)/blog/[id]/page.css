@@ -1,34 +1,42 @@
 .post-container {
-  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBEcSz8akZdGobyGoENGcRHbTPcfMa1Gn0EQ&s");
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 4rem;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  max-width: 800px;
-  margin: auto;
+  height: 100vh;
+  background: url("../../../../../public/assets/1280417267661803541.webp") no-repeat center center;
+  background-size: cover;
+  background-color: black;
+  background-size: cover;
+  color: white;
+  text-align: start;
+  padding: 20px;
+  margin-top: 50px;
 }
-
+.kadi-container {
+  background-color: rgba(0, 0, 0, 0.29);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 900px;
+  margin: auto;
+  height: auto;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid white;
+}
 .post-title {
-  color: rgb(166, 94, 7);
+  color: white;
   font-size: 3.5rem;
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: start;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .post-body {
   font-size: 1.7rem;
   line-height: 1.8;
-  color: #333;
+  color: gray;
   margin-bottom: 2rem;
-  background-color: rgba(187, 231, 245, 0.582);
-  border-left: 0.5rem solid rgb(245, 167, 71);
-  padding: 1.5rem;
+  padding: 10px 10px 10px 0; 
   border-radius: 0.5rem;
 }
 
@@ -37,7 +45,7 @@
 .post-views {
   font-size: 1.45rem;
   margin-top: 1.5rem;
-  color: #222121;
+  color: white;
 }
 
 .post-meta {
@@ -48,7 +56,6 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  background-color: rgba(251, 206, 206, 0.7);
   padding: 1.5rem;
   border-radius: 0.5rem;
   font-size: 1.3rem;
@@ -59,7 +66,6 @@
   flex-direction: column;
   align-items: center;
   font-size: 2.75rem;
-  color: #cf2d27;
 }
 
 .reaction .reaction-count {
@@ -70,14 +76,14 @@
 
 .like-dislikes {
   font-size: 1.5rem;
-  color: rgb(14, 113, 17);
+  color: white;
   font-weight: 700;
 }
 
 .post-views {
   text-align: center;
   margin-top: 2.5rem;
-  color: rgba(4, 119, 154, 0.962);
+  color: white;
 
   font-size: 2rem;
 }

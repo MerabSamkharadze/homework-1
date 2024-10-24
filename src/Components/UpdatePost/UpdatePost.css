@@ -60,7 +60,7 @@
 
 .update-post-form button {
   padding: 0.75rem;
-  background-color: rgb(6, 168, 6);
+  background-color: blue;
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -70,7 +70,7 @@
 }
 
 .update-post-form button:hover {
-  background-color: green;
+  opacity: .75;
 }
 
 .update-post-return {

@@ -6,10 +6,12 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, rgb(102, 4, 48), rgb(133, 34, 4));
   padding: 1rem 2rem;
   color: white;
   z-index: 999;
+  background-color: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 nav .Header-ul {
@@ -35,17 +37,21 @@ nav .Header-ul {
   color: white;
   text-decoration: none;
 }
-.Header-ul > button {
-  width: 100%;
-  padding: 0.5rem;
-  background-color: rgb(92, 5, 5);
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 1.6rem;
-  font-weight: 700;
+.header-button {
+  line-height: inherit;
   cursor: pointer;
-  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-family: Roboto Mono, sans-serif;
+  font-weight: 500;
+  line-height: 100%;
 }
 .Header-logo {
   font-size: 2.8rem;

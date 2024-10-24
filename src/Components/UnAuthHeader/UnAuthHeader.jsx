@@ -10,9 +10,7 @@ export default function UnAuthHeader() {
         Geo Market
       </Link>
       <nav>
-        <ul className="Header-ul">
-          <button>Registration</button>
-        </ul>
+        <button className="header-button">Registration</button>
       </nav>
     </header>
   );

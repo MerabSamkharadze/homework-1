@@ -18,7 +18,7 @@
 }
 .product-images-slider {
   width: 100%;
-  max-width: 600px; /* Adjust the max-width according to your design */
+  max-width: 600px; 
   margin: 0 auto;
 }
 .product-images {
@@ -30,6 +30,7 @@
 .product-imagee {
   max-width: 30rem;
   border-radius: 0.8rem;
+  object-fit: cover;
 }
 
 .product-info {

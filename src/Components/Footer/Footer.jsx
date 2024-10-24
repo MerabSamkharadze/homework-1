@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="container2">
         <div className="footer-top2">
           <Link className="footer-logo" href="/">
             Geo Market
