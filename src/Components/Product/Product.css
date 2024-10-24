@@ -2,37 +2,39 @@
   border: 1px solid #ccc;
   padding: 2rem;
   text-align: center;
-  background-color: rgba(250, 235, 215, 0.817);
   border-radius: 0.5rem;
   transition: all 0.2s;
   cursor: pointer;
   height: 100%;
+  background-color: rgba(41, 37, 37, 0.352); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .product:hover {
   transform: scale(1.02);
 }
 
 .product-image {
-  width: 10rem;
+  width: 18rem;
   height: 10rem;
-
+  
   object-fit: cover;
 }
 
 .product-title {
-  font-size: 1.8rem;
+  color: white;
+  font-size: 2rem;
   margin: 1rem 0;
 }
 
-.product-description p {
-  font-size: 0.7rem;
+.product-description {
+  font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 1rem;
-  color: black !important;
+  color: white !important;
 }
 .price {
-  color: green;
-  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
   font-weight: 500;
-  background-color: rgba(236, 179, 138, 0.873);
 }

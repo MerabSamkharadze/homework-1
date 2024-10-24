@@ -19,7 +19,7 @@ export default function UpdateProductForm({ product, onSubmit }) {
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
+    <form className="product-container55" onSubmit={handleSubmit}>
       <h2>Edit Product</h2>
       <input
         type="text"
