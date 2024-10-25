@@ -6,7 +6,7 @@
   transition: all 0.2s;
   cursor: pointer;
   height: 100%;
-  background-color: rgba(41, 37, 37, 0.352); 
+  background-color: rgba(41, 37, 37, 0.352);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -15,9 +15,9 @@
 }
 
 .product-image {
-  width: 18rem;
+  width: 10rem;
   height: 10rem;
-  
+
   object-fit: cover;
 }
 

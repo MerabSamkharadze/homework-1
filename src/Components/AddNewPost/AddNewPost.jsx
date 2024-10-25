@@ -53,6 +53,8 @@ export default function AddNewPost({ setLocalPosts }) {
           body: JSON.stringify({
             title: post.title,
             body: post.body,
+            id: Date.now(),
+            userId: 5,
           }),
         });
 

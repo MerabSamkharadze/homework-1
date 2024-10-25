@@ -44,13 +44,15 @@ export default function ProductList({ products, onSearch }) {
   };
 
   const handleUpdateProduct = async (updatedProduct) => {
+    console.log(updatedProduct);
+
     try {
       const response = await fetch(
         `https://dummyjson.com/products/${updatedProduct.id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(updatedProduct),
+          body: JSON.stringify({ updatedProduct }),
         }
       );
 
