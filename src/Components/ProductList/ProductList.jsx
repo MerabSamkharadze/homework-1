@@ -156,7 +156,7 @@ export default function ProductList({ products, onSearch }) {
                   handleEditClick(product);
                 }}
               >
-                Edit
+                <UpdateSvg />
               </button>
               <button
                 className="delete-button"

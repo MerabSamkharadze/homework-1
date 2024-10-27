@@ -14,10 +14,10 @@ export default function useAuth(pathname) {
         const token = await getCookie();
 
         if (token && pathname === "/login") {
-          await router.push("/");
+          router.push("/");
         } else if (!token && pathname !== "/login") {
           setIsAuthenticated(false);
-          await router.push("/login");
+          router.push("/login");
         } else {
           setIsAuthenticated(true);
         }
