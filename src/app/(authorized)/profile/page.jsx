@@ -2,7 +2,7 @@ import "./Profile.css";
 import { getSession } from "@auth0/nextjs-auth0";
 
 export default async function Profile() {
-  const { user } = await getSession();
+  const { user } = (await getSession()) ?? {};
 
   return (
     <section className="profile-section">
@@ -20,22 +20,21 @@ export default async function Profile() {
             </p>
           </div>
           <div className="profile-image">
-            <img src={user.picture} alt={user.name} className="profile-pic" />
+            {user && (
+              <img src={user.picture} alt={user.name} className="profile-pic" />
+            )}
           </div>
           <div className="profile-details">
             <h4>Details</h4>
             <div>
               <span className="bold-text">
                 Name:
-                <p>{user.name}</p>
+                {user && <p>{user.name}</p>}
               </span>
-              {/* <span className="bold-text">
-                Age:
-                <p> {data.age} years</p>{" "}
-              </span> */}
+
               <span className="bold-text">
                 Email:
-                <p>{user.email} </p>
+                {user && <p>{user.email} </p>}
               </span>
             </div>
           </div>
