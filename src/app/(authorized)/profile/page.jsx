@@ -1,31 +1,8 @@
-import { cookies } from "next/headers";
-import { refreshAccessToken } from "../../../lib/action";
 import "./Profile.css";
+import { getSession } from "@auth0/nextjs-auth0";
+
 export default async function Profile() {
-  const cookieStore = cookies();
-  let token = cookieStore.get("accessToken");
-
-  if (!token) {
-    const refreshResponse = await refreshAccessToken();
-    if (!refreshResponse.success) {
-      return <h1>Please log in</h1>;
-    }
-    token = cookieStore.get("accessToken");
-  }
-
-  const response = await fetch("https://dummyjson.com/auth/me", {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer ${token.value}`,
-    },
-    credentials: "include",
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    return <h1>Failed to load profile</h1>;
-  }
+  const { user } = await getSession();
 
   return (
     <section className="profile-section">
@@ -43,33 +20,24 @@ export default async function Profile() {
             </p>
           </div>
           <div className="profile-image">
-            <img
-              src={data.image}
-              alt={`${data.username} ${data.lastName}`}
-              className="profile-pic"
-            />
+            <img src={user.picture} alt={user.name} className="profile-pic" />
           </div>
           <div className="profile-details">
             <h4>Details</h4>
             <div>
               <span className="bold-text">
-              Name:
-                <p>
-                   {data.username} {data.lastName}
-                </p>{" "}
+                Name:
+                <p>{user.name}</p>
               </span>
-              <span className="bold-text">
-              Age:
+              {/* <span className="bold-text">
+                Age:
                 <p> {data.age} years</p>{" "}
-              </span>
+              </span> */}
               <span className="bold-text">
-              Location:
-                <p>
-                   {data.address.city}, {data.address.state},{" "}
-                </p>
+                Email:
+                <p>{user.email} </p>
               </span>
             </div>
-
           </div>
         </div>
       </div>

@@ -9,14 +9,6 @@ const nextConfig = {
       },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: "/api/auth/login",
-        destination: "https://dummyjson.com/auth/login",
-      },
-    ];
-  },
 };
 
 export default nextConfig;

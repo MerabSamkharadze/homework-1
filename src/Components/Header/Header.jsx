@@ -1,26 +1,12 @@
 "use client";
 
-import { logout } from "@/lib/action";
 import "./Header.css";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 export default function Header() {
-  const router = useRouter();
-
-  const handleLogout = async () => {
-    try {
-      const result = await logout();
-      if (result.success) {
-        router.push("/login");
-      } else {
-        console.error("Logout failed", result.message);
-      }
-    } catch (error) {
-      console.error("Error during logout:", error);
-    }
-  };
-
+  const { user } = useUser();
   return (
     <header className="Header">
       <nav>
@@ -52,14 +38,19 @@ export default function Header() {
             </Link>
           </li>
         </ul>
+
         <Link className="Header-logo Link" href="/">
           Geo Market
         </Link>
       </nav>
-
-      <button className="header-button" onClick={handleLogout}>
-        Log Out
-      </button>
+      <div>
+        {user && (
+          <a className="header-button" href="/api/auth/logout">
+            Logout
+          </a>
+        )}
+        {user && <p className="user"> {user.name}</p>}
+      </div>
     </header>
   );
 }
