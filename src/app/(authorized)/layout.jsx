@@ -1,4 +1,4 @@
-import "../Global.css";
+import "../globals.css";
 
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 
@@ -12,13 +12,11 @@ export const metadata = {
 
 function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <body>
+      <Header />
+      {children}
+      <Footer />
+    </body>
   );
 }
 

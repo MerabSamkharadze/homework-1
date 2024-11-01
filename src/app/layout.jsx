@@ -1,4 +1,6 @@
 import { UserProvider } from "@auth0/nextjs-auth0/client";
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import "./globals.css";
 
 export const metadata = {
   title: "Geo Market",
@@ -9,7 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <UserProvider>
-        <body>{children}</body>
+        <body className="dark:bg-black">
+          <ThemeProvider>{children}</ThemeProvider>
+        </body>
       </UserProvider>
     </html>
   );

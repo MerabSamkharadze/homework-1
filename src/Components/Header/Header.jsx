@@ -2,6 +2,7 @@
 
 import "./Header.css";
 import Link from "next/link";
+import ThemeToggleButton from "../ThemeToggleButton";
 
 import { useUser } from "@auth0/nextjs-auth0/client";
 
@@ -33,10 +34,11 @@ export default function Header() {
           </li>
 
           <li>
-            <Link className="Link" href="/profile">
+            <Link className="Link " href="/profile">
               Profile
             </Link>
           </li>
+          <ThemeToggleButton />
         </ul>
 
         <Link className="Header-logo Link" href="/">
@@ -49,7 +51,7 @@ export default function Header() {
             Logout
           </a>
         )}
-        {user && <p className="user"> {user.name}</p>}
+        {user && <p className="user "> {user.name}</p>}
       </div>
     </header>
   );

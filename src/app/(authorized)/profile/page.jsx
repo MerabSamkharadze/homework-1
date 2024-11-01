@@ -2,7 +2,7 @@ import "./Profile.css";
 import { getSession } from "@auth0/nextjs-auth0";
 
 export default async function Profile() {
-  const { user } = await getSession() ?? {};
+  const { user } = (await getSession()) ?? {};
 
   return (
     <section className="profile-section">

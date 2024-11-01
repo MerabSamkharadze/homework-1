@@ -2,9 +2,6 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  
-  
-  
 }
 
 .page-title {
@@ -20,22 +17,21 @@
   border-radius: 1rem;
   margin-top: 3.5rem;
   width: max-content;
-  
-
 }
 
 .posts-container {
   font-size: 2rem;
   flex-grow: 1;
   min-height: 100vh;
-  width: 1000px;
-  background-color: rgba(0, 0, 0, 0.29); 
+
+  background-color: rgba(0, 0, 0, 0.29);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   margin-bottom: 20px;
   border-radius: 20px;
   padding-bottom: 50px;
   margin-top: 20px;
+  align-items: center;
 }
 
 .post {
@@ -103,14 +99,12 @@
 .Link {
   text-decoration: none;
   color: inherit;
-  
 }
 .see-more {
   padding-top: 20px;
   text-decoration: none;
   font-size: large;
   color: rgb(176, 172, 172);
-  
 }
 
 .deletePost {
