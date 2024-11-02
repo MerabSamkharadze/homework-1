@@ -8,7 +8,7 @@ export default function ThemeToggleButton() {
       onClick={toggleTheme}
       className="p-2 rounded-full focus:outline-none focus:ring"
     >
-      {theme === "light" ? "🌞" : "🌜"}
+      {theme === "light" ? "🌝" : "🌚"}
     </button>
   );
 }

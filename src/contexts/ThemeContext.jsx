@@ -1,17 +1,13 @@
 "use client";
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState, useContext } from "react";
+import useThemeInitializer from "@/hooks/useThemeInitializer";
 
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    // ლოკალური მეხსიერებიდან თემის წაკითხვა და მის გამოყენება
-    const savedTheme = localStorage.getItem("theme") || "light";
-    setTheme(savedTheme);
-    document.documentElement.classList.toggle("dark", savedTheme === "dark");
-  }, []);
+  useThemeInitializer(setTheme);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
