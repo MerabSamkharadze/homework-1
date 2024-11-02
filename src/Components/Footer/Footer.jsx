@@ -1,97 +1,91 @@
 import React from "react";
-import "./Footer.css";
-
 import Link from "next/link";
 
 export default function Footer() {
+  const now = new Date();
+
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+
+  const formattedDate = `${year}-${month}-${day}`;
   return (
-    <footer className="footer">
-      <div className="container2">
-        <div className="footer-top2">
-          <Link className="footer-logo" href="/">
-            Geo Market
-          </Link>
-          <div className="title2">November 8-9</div>
-          <div className="title2">Live and Virtual</div>
-        </div>
+    <footer className="bg-[rgba(180,179,249,0.69)] dark:bg-gray-900 text-black dark:text-gray-300 py-5 font-sans transition-colors duration-300 ">
+      <div className="max-w-screen-xl mx-auto px-5">
+        {/* Footer Content */}
+        <div className="flex justify-between items-start flex-wrap mb-5">
+          <nav className="flex gap-8 mb-4 md:mb-0">
+            <ul className="flex gap-8 list-none">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products"
+                  className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/profile"
+                  className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
+                  Profile
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
-        <div className="footer-content">
-          <div className="footer-1-links">
-            <nav className="footer-nav">
-              <ul className="footer-ul">
-                <li>
-                  <Link className="Link" href="/about">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link className="Link" href="/products">
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link className="Link" href="/contact">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link className="Link" href="/blog">
-                    Blog
-                  </Link>
-                </li>
-
-                <li>
-                  <Link className="Link" href="/profile">
-                    Profile
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div className="footer-social">
-            <div className="social-logos">
+          {/* Social Media Icons */}
+          <div className="flex gap-5">
+            <div className="bg-gray-500  dark:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-800 dark:hover:bg-blue-700 transition duration-300">
               <img
-                loading="lazy"
                 src="https://cdn.prod.website-files.com/67061df890aa3a22852e80c7/67061df890aa3a22852e8103_Facebook.svg"
                 alt="Facebook Logo"
+                className="w-4 h-4 invert dark:invert-0 transition-transform transform hover:scale-110"
               />
             </div>
-            <div className="social-logos">
+            <div className="bg-gray-500  dark:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-red-500 dark:hover:bg-red-400 transition duration-300">
               <img
-                loading="lazy"
                 src="https://cdn.prod.website-files.com/67061df890aa3a22852e80c7/67061df890aa3a22852e8104_instagram-logo.svg"
                 alt="Instagram Logo"
+                className="w-4 h-4 invert dark:invert-0 transition-transform transform hover:scale-110"
               />
             </div>
-
-            <div className="social-logos">
+            <div className="bg-gray-500  dark:bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-400 dark:hover:bg-blue-400 transition duration-300">
               <img
-                loading="lazy"
                 src="https://cdn.prod.website-files.com/67061df890aa3a22852e80c7/67061df890aa3a22852e8105_social-media-social-media-logo-twitter.svg"
                 alt="Twitter Logo"
+                className="w-4 h-4 invert dark:invert-0 transition-transform transform hover:scale-110"
               />
             </div>
           </div>
         </div>
-
-        <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <div className="small-text">Powered by</div>
-            <h1>KaDi</h1>
-            <div className="small-text">
-              Designed by{" "}
-              <a href="http://junostudio.design" className="white-text">
-                Juno
-              </a>
-            </div>
-          </div>
-          <div className="footer-horizontal-links-2">
-            <p className="footer-link-small">Licensing</p>
-            <p className="footer-link-small">Styleguide</p>
-            <p className="footer-link-small">Instructions</p>
-            <p className="footer-link-small">Changelog</p>
-          </div>
-        </div>
+        <p className="text-center">&copy; All rights reserved.</p>
+        <p className="text-center"> {formattedDate}</p>
       </div>
     </footer>
   );

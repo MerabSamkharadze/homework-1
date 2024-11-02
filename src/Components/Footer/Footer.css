@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   background-color: #000;
   color: #fff;
   padding: 20px 0;
@@ -121,7 +121,7 @@
 }
 .social-logos:hover img {
   filter: brightness(0) invert(1); /* Turns white to black */
-}
+/* }
 .social-logos > img {
   width: 16px;
   height: 16px;
@@ -147,4 +147,4 @@
 
 .small-text {
   font-size: 12px;
-}
+}  */
