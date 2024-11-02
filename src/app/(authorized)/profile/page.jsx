@@ -1,4 +1,5 @@
 import "./Profile.css";
+import Image from "next/image";
 import { getSession } from "@auth0/nextjs-auth0";
 
 export default async function Profile() {
@@ -21,7 +22,13 @@ export default async function Profile() {
           </div>
           <div className="profile-image">
             {user && (
-              <img src={user.picture} alt={user.name} className="profile-pic" />
+              <Image
+                src={user.picture}
+                alt={user.name}
+                width={200}
+                height={200}
+                className="profile-pic"
+              />
             )}
           </div>
           <div className="profile-details">
