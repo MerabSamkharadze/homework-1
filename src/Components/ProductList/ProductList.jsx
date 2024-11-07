@@ -3,7 +3,7 @@
 import "./ProductList.css";
 import Product from "../Product/Product";
 import UpdateProductForm from "../UpdateProductForm/UpdateProductForm";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import SearchBar from "../SearchBar/SearchBar";
 import AddNewProduct from "../AddNewProduct/AddNewProduct";
 import { useEffect, useState } from "react";
@@ -79,7 +79,9 @@ export default function ProductList({ products, onSearch }) {
     handleUpdateProduct(updatedProduct);
     setEditingProduct(null);
   };
-
+  const handleProductClick = (productId) => {
+    router.push(`/en/products/${productId}`);
+  };
   return (
     <div className="container080">
       <div className="sort-container">
@@ -99,7 +101,7 @@ export default function ProductList({ products, onSearch }) {
         {products.map((product) => (
           <div
             className="productLink"
-            onClick={() => router.push(`/products/${product.id}`)}
+            onClick={() => handleProductClick(product.id)}
             key={product.id}
           >
             <Product

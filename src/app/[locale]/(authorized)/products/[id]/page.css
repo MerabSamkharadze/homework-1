@@ -6,15 +6,15 @@
   padding-bottom: 50px;
   border-radius: 0.8rem;
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
-  background: url("../../../../../public/assets/1280417267661803541.webp") repeat center ;
+  background: url("../../../../../../public/assets/1280417267661803541.webp")
+    repeat center;
   background-size: cover;
-
 }
 .single-product {
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  background-color: rgba(41, 37, 37, 0.29); 
+  background-color: rgba(41, 37, 37, 0.29);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 0 30px 20px 30px;
@@ -30,7 +30,7 @@
 }
 .product-images-slider {
   width: 100%;
-  max-width: 600px; 
+  max-width: 600px;
   margin: 0 auto;
 }
 .product-images {

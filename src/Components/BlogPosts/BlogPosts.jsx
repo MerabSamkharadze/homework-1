@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import "./BlogPosts.css";
 import AddNewPost from "../AddNewPost/AddNewPost";
 import { useState, useEffect } from "react";
