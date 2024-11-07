@@ -5,14 +5,14 @@
   justify-content: center;
   height: 100vh;
   padding: 2rem;
-  background: url("../../../../public/assets/aka.jpg")
-  no-repeat center center;
-background-size: cover;
+  background: url("../../../../../public/assets/aka.jpg") no-repeat center
+    center;
+  background-size: cover;
 }
 .about-us {
   display: flex;
   flex-direction: column;
-  background-color: rgba(41, 37, 37, 0.29); 
+  background-color: rgba(41, 37, 37, 0.29);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
@@ -58,7 +58,7 @@ background-size: cover;
   color: white;
 }
 .about-buttons div:nth-child(1):hover {
-  opacity: .75;
+  opacity: 0.75;
 }
 .about-buttons div:nth-child(2) {
   cursor: pointer;

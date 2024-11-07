@@ -1,11 +1,27 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useRouter, usePathname } from "next/navigation";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
+
 import Image from "next/image";
 import ThemeToggleButton from "../ThemeToggleButton";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
 export default function Header() {
+  const t = useTranslations("Header");
+
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const changeLanguage = (locale) => {
+    setIsOpen(false);
+
+    router.push(`/${locale}${pathname.slice(3)}`);
+  };
+
   const { user } = useUser();
   return (
     <header className="flex fixed top-0 left-0 w-full justify-between items-center px-10 py-8 z-50 dark:text-white text-black bg-[rgba(180,179,249,0.69)] dark:bg-[rgba(0,0,0,0.29)] dark:backdrop-blur-md backdrop-blur-md">
@@ -24,7 +40,7 @@ export default function Header() {
               href="/about"
               className="dark:text-white text-black font-bold text-2xl  "
             >
-              About
+              {t("about")}
             </Link>
           </li>
           <li className="relative py-2">
@@ -32,7 +48,7 @@ export default function Header() {
               href="/products"
               className="dark:text-white text-black font-bold text-2xl  "
             >
-              Products
+              {t("products")}
             </Link>
           </li>
           <li className="relative py-2">
@@ -40,7 +56,7 @@ export default function Header() {
               href="/contact"
               className="dark:text-white text-black font-bold text-2xl  "
             >
-              Contact
+              {t("contact")}
             </Link>
           </li>
           <li className="relative py-2">
@@ -48,7 +64,7 @@ export default function Header() {
               href="/blog"
               className="dark:text-white text-black font-bold text-2xl  "
             >
-              Blog
+              {t("blog")}
             </Link>
           </li>
           <li className="relative py-2">
@@ -56,7 +72,7 @@ export default function Header() {
               href="/profile"
               className="dark:text-white text-black font-bold text-2xl  "
             >
-              Profile
+              {t("profile")}
             </Link>
           </li>
           <ThemeToggleButton />
@@ -88,6 +104,30 @@ export default function Header() {
             Logout
           </a>
         )}
+        <div className="relative">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="bg-gray-700 text-white p-2 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+            {pathname.includes("/ka") ? "ქართული" : "English"}
+          </button>
+          {isOpen && (
+            <div className="absolute bg-white text-black shadow-lg rounded-md mt-2 w-40 overflow-hidden">
+              <button
+                onClick={() => changeLanguage("en")}
+                className="w-full text-left px-4 py-2 hover:bg-gray-200"
+              >
+                English
+              </button>
+              <button
+                onClick={() => changeLanguage("ka")}
+                className="w-full text-left px-4 py-2 hover:bg-gray-200"
+              >
+                ქართული
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
