@@ -8,8 +8,6 @@
 }
 
 .update-blog-blanc {
-  width: 60vw;
-  height: 35vh;
   border-radius: 1rem;
   bottom: 2rem;
   left: 50%;
@@ -19,9 +17,6 @@
   z-index: 210;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* form */
-
 .update-post-form {
   display: flex;
   flex-direction: column;
@@ -40,6 +35,9 @@
   font-size: 1.4rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+.update-post-form textarea {
+  height: 10rem;
+}
 
 .update-post-form input:focus,
 .update-post-form textarea:focus {
@@ -54,7 +52,6 @@
 }
 
 .update-post-form textarea {
-  min-height: 2rem;
   resize: none;
 }
 
@@ -70,7 +67,7 @@
 }
 
 .update-post-form button:hover {
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .update-post-return {
