@@ -6,19 +6,13 @@ import UpdateProductForm from "../UpdateProductForm/UpdateProductForm";
 import { useRouter } from "@/i18n/routing";
 import SearchBar from "../SearchBar/SearchBar";
 import AddNewProduct from "../AddNewProduct/AddNewProduct";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Return from "../../../public/svg/ReturnSvg";
 import UpdateSvg from "../../../public/svg/UpdateSvg";
 
 export default function ProductList({ products, onSearch }) {
   const router = useRouter();
-  const [localProducts, setLocalProducts] = useState([]);
   const [editingProduct, setEditingProduct] = useState(null);
-
-  useEffect(() => {
-    const savedProducts = JSON.parse(localStorage.getItem("products")) || [];
-    setLocalProducts(savedProducts);
-  }, []);
 
   const handleSort = (event) => {
     const [sortBy, order] = event.target.value.split("-");
@@ -44,8 +38,6 @@ export default function ProductList({ products, onSearch }) {
   };
 
   const handleUpdateProduct = async (updatedProduct) => {
-    console.log(updatedProduct);
-
     try {
       const response = await fetch(
         `https://dummyjson.com/products/${updatedProduct.id}`,
@@ -59,13 +51,6 @@ export default function ProductList({ products, onSearch }) {
       if (!response.ok) {
         throw new Error("Failed to update the product.");
       }
-
-      const data = await response.json();
-      setLocalProducts((prevProducts) =>
-        prevProducts.map((product) => (product.id === data.id ? data : product))
-      );
-
-      localStorage.setItem("products", JSON.stringify(localProducts));
     } catch (error) {
       console.error("Error updating product:", error.message);
     }
@@ -137,48 +122,6 @@ export default function ProductList({ products, onSearch }) {
             onSubmit={handleFormSubmit}
           />
         )}
-
-        {localProducts.length > 0 &&
-          localProducts.map((product) => (
-            <div
-              className="productLink"
-              onClick={() => router.push(`/en/products/${product.id}`)}
-              key={product.id}
-            >
-              <Product
-                title={product.title}
-                description={product.description}
-                price={product.price}
-                image={"/assets/productImg.png"}
-              />
-              <button
-                className="edit-button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleEditClick(product);
-                }}
-              >
-                <UpdateSvg />
-              </button>
-              <button
-                className="delete-button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  const updatedProducts = localProducts.filter(
-                    (p) => product.id !== p.id
-                  );
-                  setLocalProducts(updatedProducts);
-
-                  localStorage.setItem(
-                    "products",
-                    JSON.stringify(updatedProducts)
-                  );
-                }}
-              >
-                <Return />
-              </button>
-            </div>
-          ))}
       </div>
     </div>
   );
