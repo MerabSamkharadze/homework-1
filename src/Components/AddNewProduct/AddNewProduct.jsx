@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./AddNewProduct.css";
 
-export default function AddNewProduct({ onAddProduct }) {
+export default function AddNewProduct() {
   const [newProduct, setNewProduct] = useState({
     title: "",
     description: "",
@@ -44,9 +44,7 @@ export default function AddNewProduct({ onAddProduct }) {
       const newProductWithId = { ...data, id: Date.now() };
 
       setNewProduct({ title: "", description: "", price: "" });
-      if (onAddProduct) {
-        onAddProduct(newProductWithId);
-      }
+
       toggleFormVisibility();
     } catch (error) {
       setError(error.message);

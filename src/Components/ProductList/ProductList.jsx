@@ -19,10 +19,6 @@ export default function ProductList({ products, onSearch }) {
     router.push(`/products?sortBy=${sortBy}&order=${order}`);
   };
 
-  const handleAddProduct = (newProduct) => {
-    setLocalProducts((prevProducts) => [...prevProducts, newProduct]);
-  };
-
   const handleDeleteProduct = async (id) => {
     try {
       const response = await fetch(`https://dummyjson.com/products/${id}`, {
@@ -70,7 +66,7 @@ export default function ProductList({ products, onSearch }) {
   return (
     <div className="container080">
       <div className="sort-container">
-        <AddNewProduct onAddProduct={handleAddProduct} />
+        <AddNewProduct />
         <div className="sort-controls">
           <select className="sort-select" onChange={handleSort}>
             <option value="title-asc">Sort by Title (Asc)</option>

@@ -3,7 +3,7 @@ import "./UpdatePost.css";
 import UpdateSvg from "../../../public/svg/UpdateSvg";
 import { useState } from "react";
 
-export default function UpdatePost({ post, setLocalPosts }) {
+export default function UpdatePost({ post }) {
   const [blankUpdate, setBlankUpdate] = useState(false);
 
   const [title, setTitle] = useState(post.title);
@@ -23,18 +23,6 @@ export default function UpdatePost({ post, setLocalPosts }) {
         reactions: post.reactions,
       };
 
-      const newPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
-      const index = newPosts.findIndex((item) => item.id === id);
-
-      if (index !== -1) {
-        newPosts[index] = updatedPost;
-        localStorage.setItem("posts", JSON.stringify(newPosts));
-        setLocalPosts(newPosts);
-        setBlankUpdate(false);
-      } else {
-        console.error("Post not found, unable to update.");
-      }
-
       const response = await fetch(`https://dummyjson.com/posts/${id}`, {
         method: "PUT",
         headers: {
@@ -45,9 +33,6 @@ export default function UpdatePost({ post, setLocalPosts }) {
           body: content,
         }),
       });
-
-      const result = await response.json();
-      console.log("Updated post on server:", result);
     } catch (error) {
       console.error("Error updating post:", error);
     } finally {
@@ -69,7 +54,7 @@ export default function UpdatePost({ post, setLocalPosts }) {
             ></div>
 
             <div>
-              <label>Title:</label>
+              <label className="text-white">Title:</label>
               <input
                 type="text"
                 value={title}

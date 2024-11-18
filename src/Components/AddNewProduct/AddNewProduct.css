@@ -1,7 +1,7 @@
 .form-container33 {
   max-width: 60rem;
   padding: 1.5rem;
-  background-color: rgba(41, 37, 37, 0.618); 
+  background-color: rgba(41, 37, 37, 0.618);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 0.5rem;
@@ -18,7 +18,7 @@
 .form-title {
   font-size: 1.5rem;
   font-weight: bold;
-  
+
   margin-bottom: 1rem;
 }
 
@@ -27,6 +27,7 @@
   padding: 0.5rem;
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  color: black;
   border: 1px solid #d1d5db;
   border-radius: 0.25rem;
   outline: none;

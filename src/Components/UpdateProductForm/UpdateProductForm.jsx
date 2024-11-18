@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./UpdateProductForm.css";
 
 export default function UpdateProductForm({ product, onSubmit }) {
   const [updatedProduct, setUpdatedProduct] = useState({
