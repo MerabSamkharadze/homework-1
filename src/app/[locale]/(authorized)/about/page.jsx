@@ -10,8 +10,8 @@ export default function about() {
         <p>{t("text-1")}</p>
         <p>{t("text-2")}</p>
         <div className="about-buttons">
-          <div>Get template</div>
-          <div>Learn more</div>
+          <div>{t("button-1")}</div>
+          <div>{t("button-2")}</div>
         </div>
       </div>
     </div>

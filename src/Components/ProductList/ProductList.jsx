@@ -1,5 +1,5 @@
 "use client";
-
+import { useTranslations } from "next-intl";
 import "./ProductList.css";
 import Product from "../Product/Product";
 import UpdateProductForm from "../UpdateProductForm/UpdateProductForm";
@@ -11,6 +11,7 @@ import Return from "../../../public/svg/ReturnSvg";
 import UpdateSvg from "../../../public/svg/UpdateSvg";
 
 export default function ProductList({ products, onSearch }) {
+  const t = useTranslations("products");
   const router = useRouter();
   const [editingProduct, setEditingProduct] = useState(null);
 
@@ -69,10 +70,10 @@ export default function ProductList({ products, onSearch }) {
         <AddNewProduct />
         <div className="sort-controls">
           <select className="sort-select" onChange={handleSort}>
-            <option value="title-asc">Sort by Title (Asc)</option>
-            <option value="title-desc">Sort by Title (Desc)</option>
-            <option value="price-asc">Sort by Price (Asc)</option>
-            <option value="price-desc">Sort by Price (Desc)</option>
+            <option value="title-asc">{t("title-asc")}</option>
+            <option value="title-desc">{t("title-desc")}</option>
+            <option value="price-asc">{t("price-asc")}</option>
+            <option value="price-desc">{t("price-asc")}</option>
           </select>
         </div>
         <SearchBar onSearch={onSearch} />

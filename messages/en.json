@@ -13,6 +13,19 @@
   "About": {
     "heading": "About Us",
     "text-1": "Our company was founded in 2021 to provide you with the best services and products. We offer high-quality solutions that meet your needs. Our team is ready to assist you in solving any problem and ensure you have an excellent experience.",
-    "text-2": "We value each customer and constantly innovate in our products and services. Your satisfaction is important to us"
+    "text-2": "We value each customer and constantly innovate in our products and services. Your satisfaction is important to us",
+    "button-1": "Get template",
+    "button-2": "Learn more"
+  },
+  "products": {
+    "title-asc": "Sort by Title (Asc)",
+    "title-desc": "Sort by Title (Desc)",
+    "price-asc": "Sort by Price (Asc)",
+    "price-desc": "Sort by Price (Desc)",
+    "button-add": "Add New Product",
+    "button-hide": "Hide",
+    "title": "Product Title",
+    "description": "Product Description",
+    "price": "Product Price"
   }
 }

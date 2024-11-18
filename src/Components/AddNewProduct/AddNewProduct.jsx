@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./AddNewProduct.css";
+import { useTranslations } from "next-intl";
 
 export default function AddNewProduct() {
+  const t = useTranslations("products");
   const [newProduct, setNewProduct] = useState({
     title: "",
     description: "",
@@ -58,16 +60,15 @@ export default function AddNewProduct() {
   return (
     <div>
       <button onClick={toggleFormVisibility} className="toggle-button">
-        {isVisible ? "Hide Form" : "Add New Product"}
+        {isVisible ? t("button-hide") : t("button-add")}
       </button>
 
       {isVisible && (
         <div className="form-container33">
-          <h2>Add New Product</h2>
           <input
             type="text"
             name="title"
-            placeholder="Product Title"
+            placeholder={t("title")}
             value={newProduct.title}
             onChange={handleChange}
             className="form-input"
@@ -75,7 +76,7 @@ export default function AddNewProduct() {
           <input
             type="text"
             name="description"
-            placeholder="Product Description"
+            placeholder={t("description")}
             value={newProduct.description}
             onChange={handleChange}
             className="form-input"
@@ -83,14 +84,14 @@ export default function AddNewProduct() {
           <input
             type="number"
             name="price"
-            placeholder="Product Price"
+            placeholder={t("price")}
             value={newProduct.price}
             onChange={handleChange}
             className="form-input"
             min="0"
           />
           <button onClick={handleAddNewProduct} className="add-button">
-            Add Product
+            {t("button-add")}
           </button>
           {error && <div className="error-message">{error}</div>}
         </div>
