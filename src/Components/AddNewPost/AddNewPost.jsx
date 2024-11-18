@@ -12,11 +12,6 @@ export default function AddNewPost({ setLocalPosts }) {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  useEffect(() => {
-    const storedPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
-    setLocalPosts(storedPosts);
-  }, [setLocalPosts]);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -40,11 +35,6 @@ export default function AddNewPost({ setLocalPosts }) {
           reactions: { likes: "0", dislikes: "0" },
         };
 
-        const newPosts = JSON.parse(localStorage.getItem("posts") ?? "[]");
-        newPosts.push(post);
-        localStorage.setItem("posts", JSON.stringify(newPosts));
-        setLocalPosts(newPosts);
-
         const response = await fetch("https://dummyjson.com/posts/add", {
           method: "POST",
           headers: {
@@ -59,7 +49,6 @@ export default function AddNewPost({ setLocalPosts }) {
         });
 
         const result = await response.json();
-        console.log("Post added on server:", result);
 
         setBlanc(false);
         setTitle("");
