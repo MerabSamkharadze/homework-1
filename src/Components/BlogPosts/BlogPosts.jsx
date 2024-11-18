@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/routing";
 import "./BlogPosts.css";
@@ -8,6 +9,7 @@ import ReturnSvg from "../../../public/svg/ReturnSvg";
 import UpdatePost from "../UpdatePost/UpdatePost";
 
 export default function BlogPosts({ posts }) {
+  const t = useTranslations("Posts");
   const handleDeletePost = async (postId) => {
     try {
       const response = await fetch(`https://dummyjson.com/posts/${postId}`, {
@@ -23,9 +25,8 @@ export default function BlogPosts({ posts }) {
     <>
       <AddNewPost />
       <div className="container">
-        <h1 className="page-title">Posts</h1>
+        <h1 className="page-title">{t("posts")}</h1>
         <div className="posts-container">
-          {/* Fetched Posts */}
           {posts.map((post) => (
             <div key={post.id} className="post">
               <UpdatePost post={post} />
@@ -42,10 +43,13 @@ export default function BlogPosts({ posts }) {
                   <div className="like">👍 {post.reactions.likes}</div>
                   <div className="dislike">👎 {post.reactions.dislikes}</div>
                 </div>
-                <div className="views">views: {post.views}</div>
+                <div className="views">
+                  {" "}
+                  {t("views")}: {post.views}
+                </div>
               </div>
               <Link href={`/blog/${post.id}`} className="see-more">
-                see more...
+                {t("see")}
               </Link>
             </div>
           ))}

@@ -40,5 +40,10 @@
     "submit": "Submit",
     "contact": "Contact Info",
     "address": "Melbourne, Victoria"
+  },
+  "Posts": {
+    "posts": "Posts",
+    "see": "See More ...",
+    "views": "views"
   }
 }
