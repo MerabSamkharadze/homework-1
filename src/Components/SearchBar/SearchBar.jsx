@@ -3,8 +3,10 @@
 import "./SearchBar.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function SearchBar() {
+  const t = useTranslations("products");
   const [searchQuery, setSearchQuery] = useState("");
   const [debouncedSearchQuery, setDebouncedSearchQuery] = useState(searchQuery);
   const router = useRouter();
@@ -37,7 +39,7 @@ export default function SearchBar() {
           type="text"
           value={searchQuery}
           onChange={handleSearchChange}
-          placeholder="Type to search..."
+          placeholder={t("search")}
         />
       </label>
     </div>

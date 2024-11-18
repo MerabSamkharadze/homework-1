@@ -101,7 +101,7 @@ export default function Header() {
             href="/api/auth/logout"
             className="dark:bg-white bg-black dark:text-black text-white text-center tracking-wider uppercase rounded-md px-6 py-3 font-mono font-medium "
           >
-            Logout
+            {t("logout")}
           </a>
         )}
         <div className="relative">

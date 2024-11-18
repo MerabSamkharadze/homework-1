@@ -8,7 +8,8 @@
     "products": "Products",
     "contact": "Contact",
     "blog": "Blog",
-    "profile": "Profile"
+    "profile": "Profile",
+    "logout": "Logout"
   },
   "About": {
     "heading": "About Us",
@@ -26,6 +27,18 @@
     "button-hide": "Hide",
     "title": "Product Title",
     "description": "Product Description",
-    "price": "Product Price"
+    "price": "Product Price",
+    "search": "Type to search..."
+  },
+  "Contact": {
+    "h1": "Send a Message",
+    "first-name": "First Name",
+    "last-name": "Last Name",
+    "email": "Email",
+    "mobile": "Mobile Number",
+    "text-area": "Write Your Message Here",
+    "submit": "Submit",
+    "contact": "Contact Info",
+    "address": "Melbourne, Victoria"
   }
 }
