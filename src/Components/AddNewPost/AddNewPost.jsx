@@ -3,8 +3,10 @@ import "./AddNewPost.css";
 import AddSvg from "../../../public/svg/AddSvg";
 import Return from "../../../public/svg/ReturnSvg";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function AddNewPost() {
+  const t = useTranslations("Posts");
   const [blanc, setBlanc] = useState(false);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -78,7 +80,7 @@ export default function AddNewPost() {
             </div>
 
             <div>
-              <label>Title:</label>
+              <label>{t("title")}:</label>
               <input
                 type="text"
                 value={title}
@@ -88,7 +90,7 @@ export default function AddNewPost() {
               />
             </div>
             <div>
-              <label>Content:</label>
+              <label>{t("content")}:</label>
               <textarea
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
@@ -97,7 +99,7 @@ export default function AddNewPost() {
               />
             </div>
             <button type="submit" disabled={loading}>
-              {loading ? "Adding..." : "Add Blog Post"}
+              {loading ? t("adding") : t("add")}
             </button>
 
             {error && <div className="error">{error}</div>}

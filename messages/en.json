@@ -44,6 +44,10 @@
   "Posts": {
     "posts": "Posts",
     "see": "See More ...",
-    "views": "views"
+    "views": "views",
+    "title": "Title",
+    "content": "Content",
+    "add": "Add Post",
+    "adding": "Adding ..."
   }
 }
