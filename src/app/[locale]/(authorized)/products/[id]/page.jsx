@@ -30,63 +30,62 @@ export default async function Page({ params }) {
   return (
     <div className="product-container">
       <div className="single-product">
-      <div className="product-images">
-        <Image
-          src={products.images[0]}
-          alt={products.title}
-          width={100}
-          height={100}
-          className="product-imagee"
-        />
-      </div>
-
-      <h1 className="product-titlee">{products.title}</h1>
-
-      <div className="product-info">
-        <div className="product-description">
-          <h3>Description</h3>
-          <p>{products.description}</p>
+        <div className="product-images">
+          <Image
+            src={products.images[0]}
+            alt={products.title}
+            width={100}
+            height={100}
+            className="product-imagee"
+          />
         </div>
 
-        <div className="product-meta">
-          <div className="product-details">
-            <strong>Price:</strong> ${products.price}
+        <h1 className="product-titlee">{products.title}</h1>
+
+        <div className="product-info">
+          <div className="product-description">
+            <h3>Description</h3>
+            <p>{products.description}</p>
           </div>
-          <div className="product-details">
-            <strong>Category:</strong> {products.category}
+
+          <div className="product-meta">
+            <div className="product-details">
+              <strong>Price:</strong> ${products.price}
+            </div>
+            <div className="product-details">
+              <strong>Category:</strong> {products.category}
+            </div>
+            <div className="product-details">
+              <strong>Brand:</strong> {products.brand}
+            </div>
+            <div className="product-details">
+              <strong>Availability:</strong> {products.availabilityStatus}
+            </div>
           </div>
-          <div className="product-details">
-            <strong>Brand:</strong> {products.brand}
+
+          <div className="product-warranty">
+            <strong>Warranty:</strong> {products.warrantyInformation}
           </div>
-          <div className="product-details">
-            <strong>Availability:</strong> {products.availabilityStatus}
+          <div className="product-shipping">
+            <strong>Shipping:</strong> {products.shippingInformation}
           </div>
         </div>
 
-        <div className="product-warranty">
-          <strong>Warranty:</strong> {products.warrantyInformation}
+        <div className="product-reviews">
+          <h3>Customer Reviews</h3>
+          <ul>
+            {products.reviews.map((review, index) => (
+              <li key={index}>
+                <p>
+                  <strong>{review.reviewerName}:</strong> {review.comment}
+                </p>
+                <p>Rating: {review.rating} / 5</p>
+                <p>Date: {new Date(review.date).toLocaleDateString()}</p>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="product-shipping">
-          <strong>Shipping:</strong> {products.shippingInformation}
-        </div>
       </div>
-
-      <div className="product-reviews">
-        <h3>Customer Reviews</h3>
-        <ul>
-          {products.reviews.map((review, index) => (
-            <li key={index}>
-              <p>
-                <strong>{review.reviewerName}:</strong> {review.comment}
-              </p>
-              <p>Rating: {review.rating} / 5</p>
-              <p>Date: {new Date(review.date).toLocaleDateString()}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-      </div>
-      
     </div>
   );
 }

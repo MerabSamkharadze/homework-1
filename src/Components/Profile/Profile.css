@@ -1,0 +1,125 @@
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("/assets/kadi.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: black;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.profile-container {
+  background-color: rgba(0, 0, 0, 0.29);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 900px;
+  margin: auto;
+  height: auto;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid white;
+}
+
+.profile-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.profile-intro {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-about {
+  flex: 1;
+  margin-right: 20px;
+}
+.profile-about > h4 {
+  font-size: 30px;
+  text-align: start;
+}
+.profile-about > p {
+  text-align: start;
+  padding-top: 10px;
+  font-size: 16px;
+}
+.profile-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-url {
+  margin: 0 5px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+.profile-details > h4 {
+  font-size: 25px;
+  text-align: start;
+}
+.profile-details > div {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.profile-details > div > span {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 20px;
+  color: gray;
+}
+.profile-details > div > span > p {
+  padding-top: 5px;
+  display: flex;
+  color: white;
+  font-size: 16px;
+}

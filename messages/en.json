@@ -49,5 +49,14 @@
     "content": "Content",
     "add": "Add Post",
     "adding": "Adding ..."
+  },
+  "Profile": {
+    "profile": "profile",
+    "react": "I'm a creative react web developer",
+    "about": "About me",
+    "text": "Aspiring full-stack developer with a passion for mastering programming from the ground up. Currently diving deep into React and expanding knowledge across various languages and technologies. ",
+    "details": "Details",
+    "name": "Name",
+    "email": "Email"
   }
 }
