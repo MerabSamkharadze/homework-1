@@ -14,19 +14,17 @@ export default function AddNewProduct({ onAddProduct }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setNewProduct((prev) => ({ ...prev, [name]: value }));
-    if (error) setError(""); // Clear error on change
+    if (error) setError("");
   };
 
   const handleAddNewProduct = async () => {
     const { title, description, price } = newProduct;
 
-    // Check if all fields are filled
     if (!title || !description || !price || Number(price) <= 0) {
       setError("All fields are required and price must be positive.");
       return;
     }
 
-    // Simulating a POST request to DummyJSON
     try {
       const response = await fetch("https://dummyjson.com/products/add", {
         method: "POST",
@@ -34,7 +32,7 @@ export default function AddNewProduct({ onAddProduct }) {
         body: JSON.stringify({
           title,
           description,
-          price: parseFloat(price), // Ensuring price is a number
+          price: parseFloat(price),
         }),
       });
 
@@ -42,16 +40,9 @@ export default function AddNewProduct({ onAddProduct }) {
         throw new Error("Failed to add the product.");
       }
 
-      const data = await response.json(); // Simulated response from server
-      const newProductWithId = { ...data, id: Date.now() }; // Simulating server response with a new ID
+      const data = await response.json();
+      const newProductWithId = { ...data, id: Date.now() };
 
-      // Update local storage and parent component
-      const updatedProducts =
-        JSON.parse(localStorage.getItem("products")) || [];
-      updatedProducts.push(newProductWithId);
-      localStorage.setItem("products", JSON.stringify(updatedProducts));
-
-      // Reset form fields
       setNewProduct({ title: "", description: "", price: "" });
       if (onAddProduct) {
         onAddProduct(newProductWithId);

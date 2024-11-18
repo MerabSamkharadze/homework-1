@@ -2,9 +2,9 @@
 import "./AddNewPost.css";
 import AddSvg from "../../../public/svg/AddSvg";
 import Return from "../../../public/svg/ReturnSvg";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export default function AddNewPost({ setLocalPosts }) {
+export default function AddNewPost() {
   const [blanc, setBlanc] = useState(false);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
