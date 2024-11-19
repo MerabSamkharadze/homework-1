@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Header");
   const now = new Date();
 
   const year = now.getFullYear();
@@ -21,7 +23,7 @@ export default function Footer() {
                   href="/about"
                   className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
-                  About
+                  {t("about")}
                 </Link>
               </li>
               <li>
@@ -29,7 +31,7 @@ export default function Footer() {
                   href="/products"
                   className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
-                  Products
+                  {t("products")}
                 </Link>
               </li>
               <li>
@@ -37,7 +39,7 @@ export default function Footer() {
                   href="/contact"
                   className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
-                  Contact
+                  {t("contact")}
                 </Link>
               </li>
               <li>
@@ -45,7 +47,7 @@ export default function Footer() {
                   href="/blog"
                   className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
-                  Blog
+                  {t("blog")}
                 </Link>
               </li>
               <li>
@@ -53,7 +55,7 @@ export default function Footer() {
                   href="/profile"
                   className="text-black dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
-                  Profile
+                  {t("profile")}
                 </Link>
               </li>
             </ul>
@@ -84,7 +86,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <p className="text-center">&copy; All rights reserved.</p>
+        <p className="text-center">&copy; {t("rights")}.</p>
         <p className="text-center"> {formattedDate}</p>
       </div>
     </footer>
