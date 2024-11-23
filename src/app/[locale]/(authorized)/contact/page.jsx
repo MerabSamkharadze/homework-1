@@ -46,7 +46,7 @@ export default function Contact() {
                     alt="phone"
                   />
                 </span>
-                <span>0481-111-111</span>
+                <span>0481-111-1111</span>
               </li>
             </ul>
           </div>
