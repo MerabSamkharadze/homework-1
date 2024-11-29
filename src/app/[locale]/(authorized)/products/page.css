@@ -2,11 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../../../../../public/assets/1280417267661803541.webp")
-    repeat center;
-  background-size: cover;
-  background-color: black;
-  background-size: contain;
+
   color: white;
   text-align: center;
   padding-top: 100px;

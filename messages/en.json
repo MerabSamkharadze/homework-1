@@ -1,7 +1,11 @@
 {
   "HomePage": {
     "title": "Hello world!",
-    "about": "Go to the about page"
+    "about": "Go to the about page",
+    "digital": "Digital Makers",
+    "destiny": "Arts Center, San Francisco",
+    "message": "Join us at Digital Makers, where digital creators unite to innovate, collaborate, and inspire new possibilities.",
+    "button": " Book your spot now"
   },
   "Header": {
     "about": "About",
