@@ -6,9 +6,6 @@
   padding-bottom: 50px;
   border-radius: 0.8rem;
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
-  background: url("../../../../../../public/assets/1280417267661803541.webp")
-    repeat center;
-  background-size: cover;
 }
 .single-product {
   width: 100%;
