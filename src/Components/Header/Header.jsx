@@ -69,6 +69,14 @@ export default function Header() {
           </li>
           <li className="relative py-2">
             <Link
+              href="/pricing"
+              className="dark:text-white text-black font-bold text-2xl  "
+            >
+              {t("pricing")}
+            </Link>
+          </li>
+          <li className="relative py-2">
+            <Link
               href="/profile"
               className="dark:text-white text-black font-bold text-2xl  "
             >
